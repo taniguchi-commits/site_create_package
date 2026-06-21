@@ -1,0 +1,43 @@
+@charset "utf-8";
+
+/* =============================================================
+breadcrumb.scss
+============================================================== */
+
+.p-pan{
+  display: none;
+  @include mq-up(lg){
+    display: block;
+    margin-top: 20px;
+    margin-bottom: -20px;
+  }
+  
+  ul{
+    display: flex;
+    justify-content: flex-end;
+  }
+  li{
+    color: #5e5e5e;
+    @include m-font-size(12);
+    margin-right: 5px;
+    
+    &:first-of-type{
+      position: relative;
+      
+      &::before{
+        @include m-fa_icon(f015);
+        left: 0;
+        color:$color_main;
+        margin-right: 5px;
+      }
+    }
+  }
+  a{
+    @include m-alink(#5e5e5e);
+    @include m-transition(all);
+    
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+}

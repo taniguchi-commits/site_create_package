@@ -1,0 +1,106 @@
+@charset "utf-8";
+
+/* =============================================================
+rowBox.scss
+============================================================== */
+//左右のレイアウト
+
+// base
+.p-rowBox{
+  @include mq-up(md){
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
+.p-rowBox--sm{
+  @include mq-up(sm){
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
+
+.p-rowBox__anshin{
+  @include mq-up(sm){
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  } 
+}
+
+
+// 左右のみのボックス
+// 1-1
+.p-rowBox--row2{
+  
+  .p-rowBox_item{
+    @include mq-up(md){
+      width:48%;
+    }
+    
+    & + .p-rowBox_item{
+      margin-top: 20px;
+      @include mq-up(md){
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+
+// 左2 右1
+.p-rowBox--l2{
+  .p-rowBox_left{
+    width:100%;
+    
+    @include mq-up(md){
+      width:63%;
+    }
+  }
+  .p-rowBox_right{
+    width:100%;
+    margin-top: 20px; 
+    @include mq-up(md){
+      width:32%;
+      margin-top: 0px; 
+    }
+  }
+}
+
+
+
+// 左1 右2
+.p-rowBox--r2{
+  .p-rowBox_left{
+    width:100%;
+    @include mq-up(md){
+      width:32%;
+    }
+  }
+  .p-rowBox_right{
+    width:100%;
+    margin-top: 20px; 
+    @include mq-up(md){
+      width:63%;
+      margin-top: 0px; 
+    }
+  }
+}
+
+
+
+
+//　横3つ
+.p-rowBox--row3{
+  @include mq-up(md){
+    @include m-flex_row3(32%);
+  }
+  .p-rowBox_item{
+    width:100%;   
+    margin-bottom: 20px; 
+    @include mq-up(md){
+      width:32%;
+    }
+  }
+}

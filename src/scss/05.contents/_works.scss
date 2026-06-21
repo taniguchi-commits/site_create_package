@@ -1,0 +1,1651 @@
+@charset "utf-8";
+
+/* =============================================================
+works.scss
+============================================================== */
+.worksCatch{
+  @include mq-up(lg){
+    text-align: center;
+  }
+  
+  &_kensu{
+    background: url("../../img/bg03.gif") no-repeat center bottom / cover;
+    padding:20px;
+    text-align: center;
+    max-width: 700px;
+    margin:40px auto;
+    
+    @include mq-up(sm){
+      padding:30px 20px;
+    }    
+    @include mq-up(lg){
+      padding:40px 20px;
+    }
+    
+    p:first-of-type{
+      @include m-font-size(22);
+      font-weight: bold;
+      display: inline-block;
+      @include m-marker(#fff,80%);
+      padding:0px 10px;
+      line-height: 1.3;
+      
+      @include mq-up(sm){
+        @include m-font-size(25);
+      }
+      @include mq-up(lg){
+        @include m-font-size(28);
+      line-height: 1.5;
+      }
+      
+      strong{
+        font-size: 140%;
+      }
+      
+      span{
+        color: $color_main;
+      }
+    }
+    
+    p + p{
+      @include m-font-size(12);
+      margin-top: 10px;
+    }
+  }
+}
+
+
+
+/* worksSearchBox
+--------------------------------------*/
+
+.worksSearchBox{
+  background: $color_bg;
+  padding-top: 30px;
+  @include mq-up(sm){
+    padding-top: 40px;
+  }
+
+  @include mq-up(lg){
+    padding-top: 50px;
+  }
+
+  &--margintop{
+    margin-top: 40px;
+    padding-top: 0px;
+    @include mq-up(sm){
+      margin-top: 60px;
+    }
+
+    @include mq-up(lg){
+      margin-top: 70px;
+    }
+
+  }
+
+}
+
+/* worksPriceform
+--------------------------------------*/
+
+.worksPriceform{
+  margin-bottom: 20px;
+  
+
+  @include mq-up(sm){
+    margin-bottom: 30px;
+  }
+
+  @include mq-up(lg){
+    margin-bottom: 40px;
+  }
+
+  &--works_top{
+    padding: 0px 20px 30px;
+    margin-top: 30px;
+
+    @include mq-up(sm){
+      padding: 0px 30px 50px;
+      margin-top: 50px;
+    }
+
+  }
+
+
+
+  &__form{
+    background: #f0f0f0;
+    padding: 12px 8px;
+    margin-bottom: 15px;
+    &--works_top{
+      background: #fff;
+    }
+
+    @include mq-up(sm){
+      padding: 15px;
+      margin-bottom: 20px;
+    }
+
+    @include mq-up(lg){
+      padding: 20px;
+      margin-bottom: 30px;
+      
+    }
+
+    .errors{
+      text-align: center;
+      line-height: 1;
+      display:none;
+        p + p {
+          margin-top: 5px;
+          line-height: 1.6;
+        }
+        p{
+          color: $color_red;
+        }
+    }
+
+    &__box{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      @include m-font-size(14);
+      @include mq-up(sm){
+        @include m-font-size(15);
+      }
+
+      @include mq-up(lg){
+        @include m-font-size(16);
+      }
+      input{
+        padding: 4px 3px;
+        @include m-font-size(14);
+        margin-right: 5px;
+        border: 1px solid #888;
+
+        @include mq-up(sm){
+          @include m-font-size(15);
+          padding: 4px 5px;
+        }
+
+        @include mq-up(lg){
+          padding: 5px 8px;
+          @include m-font-size(16);
+        }
+
+      }
+    }
+
+    &__inner{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      padding-top: 10px;
+    }
+
+    &__input{
+      margin-left: 5px;
+      margin-right: 5px;
+    }
+    &__button{
+      width: 100%;
+      margin-top: 15px;
+      text-align: center;
+      @include mq-up(md){
+        width: auto;
+        margin-top: 0px;
+        margin-left: 20px;
+      }
+
+      span{
+        display: inline-block;
+        @include m-font-size(14);
+        @extend .ygothic;
+        background: $color-orange;
+        border: none;
+        color: #fff;
+        padding: 8px 15px;
+        border-radius: 3px;
+        cursor: pointer;
+        width: 90px;
+        @include mq-up(sm){
+          @include m-font-size(15);
+        }
+
+        @include mq-up(md){
+          width: auto;
+        }
+        @include mq-up(lg){
+          padding: 7px 15px;
+          @include m-font-size(16);
+        }
+      }
+    }
+  }
+  /*********/
+
+  &__list{
+    padding: 10px 10px 3px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border: 1px solid #f0f0f0;
+
+    @include mq-up(sm){
+      padding: 15px 15px 7px;
+    }
+
+    @include mq-up(lg){
+      padding: 20px 20px 10px;
+    }
+
+    &--bordernone{
+      border: none;
+    }
+
+    &--works_top{
+      background: #fff;
+    }
+
+    @include m-flex_row4(24%);
+    li{
+      width: 49%;
+      @include m-font-size(10);
+      margin-bottom: 7px;
+      position: relative;
+
+      @include mq-up(ss){
+        @include m-font-size(11);
+      }
+
+
+      @include mq-up(md){
+        width: 32%;
+        margin-bottom: 8px;
+        @include m-font-size(14);
+      }
+
+      @include mq-up(lg){
+        width: 24%;
+        margin-bottom: 10px;
+        @include m-font-size(15);
+      }
+
+      a{
+        @include m-alink(#000);
+        display: block;
+        border:1px solid #000;
+        background: #fff;
+        text-align: center;
+        line-height: 1.4;
+        padding: 8px 1px;
+
+        @include mq-up(md){
+          padding: 8px 5px;
+        }
+
+        @include mq-up(lg){
+          padding: 10px 10px;
+        }
+
+        &:hover{
+          color: $color-orange;
+          border:1px solid $color-orange;
+          background: #fff;
+        }
+      }
+    }
+  }
+  &__caution{
+    margin-top: 7px;
+    text-align: right;
+    @include m-font-size(11);
+    @include mq-up(sm){
+      margin-top: 8px;
+      @include m-font-size(12);
+    }
+
+    @include mq-up(lg){
+      margin-top: 10px;
+      @include m-font-size(13);
+    }
+  }
+}
+
+
+/* worksCategory
+--------------------------------------*/
+
+.worksCategory{
+  margin-top:30px;
+
+  padding:15px;
+  /*
+  margin-bottom: 80px;
+  
+  @include mq-up(sm){
+    margin-bottom: 10px;
+  }  
+  @include mq-up(lg){
+    margin-bottom: 150px;
+  }
+  */
+  
+  @include mq-up(sm){
+    padding:20px;
+    margin-top: 30px;
+  }
+  @include mq-up(lg){
+    padding:30px;
+    margin-top: 50px;
+  }
+  @include mq-up(xl){
+    padding:0px 30px 50px;
+  }
+
+  &--padding{
+    padding: 30px 15px 30px;
+    margin-top:0px;
+
+    @include mq-up(sm){
+      padding: 20px 20px 20px;
+    }
+
+    @include mq-up(lg){
+      padding: 50px 30px 50px;
+    }
+
+
+  }
+
+  
+  ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: -15px;
+    margin-top: 20px;
+    
+    @include mq-up(sm){
+      @include m-flex_row3(32%);
+    }
+    @include mq-up(md){
+      @include m-flex_row4(24%);
+    }
+    @include mq-up(lg){
+      margin-top: 30px;
+      
+      &::before,
+      &::after{
+        display: none;
+      }
+    }
+  }
+  
+  li{
+    max-width: 300px;
+    width: 48%;
+    margin: 0 0 15px 0;
+    
+    @include mq-up(sm){
+      width:32%;
+    }
+    @include mq-up(md){
+      width:24%;
+    }
+    @include mq-up(lg){
+      width:19%;
+    }
+  }
+  
+  a{
+    display: block;
+    background: #fff;
+    @include m-alink;
+  }
+  
+  p{
+    padding:10px 10px;
+    @include m-font-size(13);
+    line-height: 1.3;
+    font-weight: bold;
+    text-align: center;
+    
+    span{
+      display: none;
+      @include mq-up(sm){
+        display: inline;
+      }
+    }
+  }
+}
+
+
+/* worksAreaSearch
+--------------------------------------*/
+
+.worksAreaSearch{
+  padding: 0px 20px 50px;
+  margin-top: 30px;
+
+  @include mq-up(sm){
+    padding: 0px 30px 50px;
+    margin-top: 50px;
+  }
+
+
+
+  &--area{
+    padding: 20px 20px 10px;
+    @include mq-up(sm){
+      padding: 40px 30px 30px;
+    }
+
+  }
+
+  &__wrap{
+    background: #f5eee7;
+    margin-top: 30px;
+  }
+
+  &__caution{
+    text-align: right;
+    @include m-font-size(12);
+    margin-bottom: 18px;
+
+    @include mq-up(sm){
+      @include m-font-size(13);
+    }
+
+    @include mq-up(lg){
+      @include m-font-size(14);
+      margin-bottom: 20px;
+    }
+
+  }
+
+  &__all{
+    text-align: right;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-top: 1px solid #ccc;
+    padding-top: 12px;
+    a{
+      @include m-font-size(12);
+      @include m-alink(#333);
+      
+      @include mq-up(md){
+        @include m-font-size(13);
+      }
+
+      @include mq-up(lg){
+        @include m-font-size(14);
+      }
+
+      &:hover{
+        color:$color-orange;
+      }
+    }
+  }
+
+  .p-title_h2{
+    width: 100%;
+  }
+
+  &__ttl{
+    background: #fff;
+    position: relative;
+    border-left: 5px solid $color-orange;
+    display: block;
+    padding: 15px 10px;
+    @include m-alink(#333);
+    cursor: pointer;
+    @include m-font-size(13);
+    @include mq-up(sm){
+      @include m-font-size(14);
+    }
+
+    @include mq-up(md){
+      @include m-font-size(15);
+    }
+
+    @include mq-up(lg){
+      @include m-font-size(16);
+      padding: 15px;
+    }
+
+    .arrow{
+      position: absolute;
+      width: 30px;
+      height: 100%;
+      right:0px;
+      top:0px;
+      display: block;
+      background: $color-orange;
+      z-index: 10;
+
+      @include mq-up(sm){
+        width: 40px;
+      }
+
+      @include mq-up(lg){
+        width: 50px;
+      }
+
+
+      &:hover{
+        background: #333;
+      }
+      i{
+        color: #fff;
+        position: absolute;
+        top:50%;
+        right:50%;
+        transform-origin: center;
+        font-size: 14px;
+        translate: 50% -50%;
+        rotate: 0deg;
+      }
+      &.arrow_open{
+        background: #333;
+        i{
+          rotate: 90deg;
+        }
+      }
+    }
+
+    &:hover{
+      .arrow{
+        background: #333;
+      }
+    }
+
+  }
+
+  &__region{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 15px;
+  }
+
+  &__region__ttl{
+    width: 100%;
+    @include m-font-size(16);
+    margin-bottom: 15px;
+
+    @include mq-up(sm){
+      @include m-font-size(17);
+    }
+
+    @include mq-up(lg){
+      @include m-font-size(20);
+    }
+  }
+
+  &__box{
+    width: 100%;
+    margin-bottom: 10px;
+    @include mq-up(md){
+      width: 48%;
+    }
+
+  }
+
+  &__btn{
+    background: #fff;
+    padding:20px 20px 5px;
+    display: none;
+  }
+
+  &__area{
+    display: flex;
+    flex-wrap: wrap;
+    
+    li{
+      margin-right: 15px;
+      margin-bottom: 15px;
+
+    }
+    a{
+      @include m-font-size(12);
+      @include m-alink(#333);
+
+      @include mq-up(md){
+        @include m-font-size(13);
+      }
+
+      @include mq-up(lg){
+        @include m-font-size(14);
+      }
+
+      &:before{
+        @include m-fa_icon("f105");
+        margin-right: 4px;
+      }
+      &:hover{
+        color: $color-orange;
+      }
+    }
+  }
+}
+
+
+
+
+
+/* worksBanner
+--------------------------------------*/
+.worksBanner{
+  width:100%;
+  
+  &_item{
+    text-align: center;
+    margin-bottom: 15px;
+  }
+}
+
+
+
+
+/* worksList
+--------------------------------------*/
+.worksList{
+  
+  @include mq-up(sm){
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  @include mq-up(md){
+    @include m-flex_row3(32%);
+  }
+
+  &__pages{
+    width: 100%;
+    margin-bottom: 20px;
+    @include m-font-size(14);
+    text-align: right;
+    @include mq-up(sm){
+      margin-bottom: 25px;
+      @include m-font-size(15); 
+    }
+    
+    @include mq-up(lg){
+      margin-bottom: 30px;
+      @include m-font-size(16);
+    }
+  }
+
+  &__areaselect{
+    @include m-font-size(14);
+    margin-bottom: 10px;
+    @include mq-up(sm){
+    @include m-font-size(15);
+    margin-bottom: 15px;
+    }
+
+    @include mq-up(lg){
+      
+    @include m-font-size(16);
+    margin-bottom: 20px;
+    }
+  }
+
+  &__area{
+    @include m-font-size(14);
+    margin-bottom: 10px;
+    background: $color_orange;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    border:1px solid #ff7800;
+    padding: 10px 40px 10px 20px;
+    @include mq-up(sm){
+    @include m-font-size(15);
+    padding: 8px 35px 8px 15px;
+    }
+
+    @include mq-up(lg){
+    @include m-font-size(16);
+    padding: 10px 40px 10px 20px;
+    }
+
+    span{
+      position: relative;
+      &:after{
+        position: absolute;
+        right:-15px;
+        top:50%;
+        transform: translateY(-50%);
+        @include m-fa_icon("f0da");
+      }
+    }
+    &.down{
+      span{
+        &:after{
+          transform: translateY(-50%) rotate(90deg);
+        }
+      }
+    }
+  }
+  
+  h1{
+    width:100%;
+  }
+
+  h2{
+    width:100%;
+  }
+
+  &__btnbox{
+    display: none;
+  }
+
+  &__btnwrap{
+    padding-bottom: 10px;
+    @include mq-up(sm){
+      padding-bottom: 15px;
+    }
+    @include mq-up(lg){
+      padding-bottom: 20px;
+    }
+  }
+
+  &__btn{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    margin-left: -4px;
+    @include mq-up(sm){
+      margin-left: -6px;
+    }
+    @include mq-up(lg){
+      margin-left: -8px;
+    }
+
+    li{
+      margin-left: 4px;
+      margin-bottom: 4px;
+
+      @include mq-up(sm){
+        margin-left: 6px;
+        margin-bottom: 6px;
+      }
+
+      @include mq-up(lg){
+        margin-left: 8px;
+        margin-bottom: 8px;
+      }
+
+    }
+    a{
+      border: 1px solid #ccc;
+      display: block;
+      @include m-alink(#333);
+      padding: 7px 15px;
+      @include m-font-size(12);
+      border-radius: 8px;
+      @include mq-up(sm){
+        padding: 8px 18px;
+        @include m-font-size(13);
+      }
+
+      @include mq-up(lg){
+        padding: 10px 20px;
+        @include m-font-size(14);
+      }
+
+      &:hover{
+        border: 1px solid $color_orange;
+        @include m-alink($color_orange);
+      }
+
+      &.stay{
+        border: 1px solid $color_orange;
+        @include m-alink($color_orange);     
+      }
+
+    }
+  }
+
+}
+
+/*.worksList .worksItem:nth-child(n+10){
+  @include mq-up(md){
+    margin-bottom:0;
+  }
+}*/
+
+
+.worksItem{
+  margin-bottom: 40px;
+  @include mq-up(sm){
+    width:48%;
+  }
+  @include mq-up(md){
+    width:31.5%;
+    margin-bottom: 60px;
+  }
+  @include mq-up(lg){
+    margin-bottom: 80px;
+  }
+  
+  & + .worksItem{
+    padding-top: 40px;
+    border-top:1px solid $color_border;
+    
+    @include mq-up(sm){
+      padding-top: 0;
+      border-top: none;
+    }
+  }
+  
+  
+  a{
+    display: block;
+    @include m-alink;
+    
+    @include mq-up(lg){
+      @include m-transition(opacity);
+    }
+    
+    &:hover{
+      @include mq-up(lg){
+        opacity: 0.7;
+      }      
+    }
+  }
+  
+  &_ph{
+    position: relative;
+    overflow: hidden;
+    
+    &::before{
+      content: '';
+      display: block;
+      padding-top: 65%;
+      
+      @include mq-up(lg){
+        display: none
+      }
+    }
+    
+    span{
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      
+      img{
+        object-fit: cover;
+        width:100%;
+        height:100%;
+        font-family: "object-fit: cover";
+      }
+      
+      
+      @include mq-up(lg){
+        display: inline;
+        position: relative;
+      }
+    }
+  }
+  
+
+  &_title{
+    @include m-font-size(18);
+    line-height: 1.5;
+    margin: 15px 0;
+    
+    @include mq-up(lg){
+      @include m-font-size(20);
+      /*margin: 20px 0;*/
+    }
+  }
+  
+  &_showroom{
+    margin-bottom: 15px;
+    border-left:3px solid $color_main;
+    padding-left: 5px;
+    line-height: 1.5;
+  }
+  
+  &_category{
+    display: flex;
+    flex-wrap: wrap;
+    
+    li{
+      @include m-font-size(11);
+      background: $color_bg;
+      padding:3px 5px;
+      line-height: 1;
+      margin: 0 1px 1px 0;
+    }
+  }
+
+  &_price{
+    text-align: right;
+    @include m-font-size(20);
+    color: #c00;
+    font-family: "Arial" ;
+    margin-top: 10px;
+
+    @include mq-up(sm){
+      @include m-font-size(21);
+    }
+
+    @include mq-up(lg){
+      @include m-font-size(22);
+    }
+
+    span{
+      font-size: 72%;
+    }
+    &:after{
+      content: "（税込）";
+      font-size: 72%;
+    }
+  }
+
+  &_option{
+    display: flex;
+    margin-top: 20px;
+    @include m-font-size(12);
+
+    @include mq-up(sm){
+      @include m-font-size(13);
+    }
+
+    @include mq-up(lg){
+      @include m-font-size(14);
+    }
+
+    li{
+      margin-right: 5px;
+    }
+    span{
+      display: inline-block;
+      background: #f56d07;
+      color: #fff;
+      padding: 5px 8px 5px;
+    }
+  }
+  
+  &_yobo{
+    padding:10px;
+    border:1px solid $color_border;
+    background: rgba($color_border,0.1);
+    margin-top: 15px;
+    
+    div:first-of-type{
+      img{display: none;}
+    }
+        
+    p{
+      @include m-font-size(13);
+      line-height: 1.3;
+      
+      &.worksItem_yoboTitle{
+        font-weight: bold;
+        @include m-font-size(15);
+        margin-bottom: 10px;
+      }  
+    }
+    
+  }
+  
+  
+  &_btn{
+    width:80%;
+    margin: 15px auto 0 auto;
+    
+    .btn_txt{
+      background: $color_main;
+      color:#fff;
+    }
+  }
+}
+
+
+
+// 2カラムの場合
+#l-main{
+  .worksList{
+    margin-top: 0;
+    
+    @include mq-up(md){
+    
+      &::before,
+      &::after{
+        display: none;
+      }
+    }
+
+    h2{
+      width:100%;
+    }
+  }
+
+  .worksItem{
+    @include mq-up(md){
+      width:48%;
+    }
+  }
+}
+
+
+/****市場リンクボックス*****/
+
+.ichibaLinkbox{
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  @include mq-up(sm){
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  @include mq-up(xl){
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+}
+
+/****市場タイトル*****/
+
+.ichibaBtn_ttl{
+  @include m-font-size(16);
+  margin-bottom: 15px;
+  color: #fff;
+  position: relative;
+  padding-left: 32px;
+  line-height: 1.2;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+
+  @include mq-up(sm){
+    @include m-font-size(17);
+    padding-left: 35px;
+  }
+
+  @include mq-up(lg){
+    @include m-font-size(20);
+    padding-left: 40px;
+  }
+
+  &:before{
+    @include m-fa_icon("f002");
+    position: absolute;
+    font-size: 150%;
+    left: 0px;
+    top:50%;
+    transform: translateY(-50%);
+  }
+  &--kitchen{
+    color: #fa8e1b;
+  }
+  &--toilet{
+    color: #44b3d4;
+  }
+  &--bathroom{
+    color: #3853a3;
+  }  
+}
+.ichibaBtn_ttl02{
+  color: #3853a3;
+  @include m-font-size(15);
+  margin-bottom: 13px;
+  font-weight: bold;
+  @include mq-up(sm){
+    @include m-font-size(16);
+    margin-bottom: 14px;
+  }
+
+  @include mq-up(xl){
+    @include m-font-size(17);
+    margin-bottom: 15px;
+    
+  }
+
+}
+
+
+/****kitchen*****/
+
+.ichibaLink_kitchenbtn{
+  background: #feeecb;
+
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    li{
+      a:hover{
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+        display: block;
+        @include m-transition(box-shadow,0.3);
+      }
+    }
+  }
+  &__layout{
+    width: 100%;
+    @include mq-up(xl){
+      width: 24%;
+    }
+    ul{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-bottom: 15px;
+      @include mq-up(sm){
+        justify-content: flex-start;
+        margin-bottom: 25px;
+      }
+      @include mq-up(xl){
+        display: block;
+        margin-bottom: 0px;
+      }
+      li{
+        margin-bottom: 5px;
+        width: 49%;
+        @include mq-up(sm){
+          margin-right: 1%;
+          margin-bottom: 8px;
+          width: 24%;
+        }
+        @include mq-up(xl){
+          width: 100%;
+          margin-right: 0%;
+          margin-bottom: 0px;
+        }   
+        & + li{
+          margin-top: 0px;
+          @include mq-up(xl){
+            margin-top: 5px;
+          }
+        }
+        a{
+          box-shadow: 0 0 0px rgba(0, 0, 0, 0.3);
+          img{
+           border-radius: 3px;
+          }
+        }
+      }
+    }
+  }
+
+  &__maker{
+    width: 100%;
+    @include mq-up(xl){
+      width: 31%;
+    }
+    ul{
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-bottom: 15px;
+      @include mq-up(sm){
+        margin-bottom: 25px;
+      }
+      @include mq-up(xl){
+        margin-bottom: 0px;
+      }
+    }
+    li{
+      margin-bottom: 5px;
+      width: 49%;
+      @include mq-up(sm){
+        width: 24%;
+        margin-right: 1%;
+      }
+      @include mq-up(xl){
+        width: 48%;
+        margin-right: 0px;
+      }
+
+      a{
+        display: block;
+        background: #fff;
+        text-align: center;
+        padding-top: 13px;
+        padding-bottom: 13px;
+        border-radius: 3px;
+
+        @include mq-up(sm){
+          padding-top: 15px;
+          padding-bottom: 15px;
+        }
+
+        img{
+          max-width: 100px;
+        }
+      }
+    }
+  }
+  &__other{
+    width: 100%;
+    @include mq-up(xl){
+      width: 40%;
+    }
+    ul{
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      @include mq-up(sm){
+        justify-content: flex-start;
+      }
+      @include mq-up(xl){
+        justify-content: space-between;
+      }
+      li{
+        width: 49%;
+        margin-bottom: 5px; 
+        @include mq-up(sm){
+          width: 24%;
+          margin-right: 1%;
+        }
+        @include mq-up(xl){
+          width: 48%;
+          margin-right: 0px;
+        }
+        a{
+          img{
+            border-radius: 3px;
+            }
+        }
+      }
+    }
+  }
+}
+
+/****toilet*****/
+
+.ichibaLink_toiletbtn{
+  background: #f2f3f6;
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    li{
+      a{
+        display: block;
+      }
+      a:hover{
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+        display: block;
+        @include m-transition(box-shadow,0.3);
+      }
+    }
+  }
+  &__layout{
+    width: 100%;
+    @include mq-up(xl){
+      width: 30%;
+    }
+    ul{
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-bottom: 15px;
+      @include mq-up(sm){
+        justify-content: flex-start;
+        margin-bottom: 25px;
+      }
+      @include mq-up(xl){
+        justify-content: space-between;
+        margin-bottom: 0px;
+      }
+      li{
+        width: 48%;
+        margin-bottom: 5px;
+        @include mq-up(sm){
+          width: 24%;
+          margin-right: 1%;
+        }
+        @include mq-up(xl){
+          width: 48%;
+          margin-right: 0px;
+          margin-bottom: 10px;
+        }
+        a{
+          box-shadow: 0 0 0px rgba(0, 0, 0, 0.3);
+          background: linear-gradient(#fff, #e4eff4);
+          border: 3px solid #fff;
+          img{
+           border-radius: 3px;
+
+          }
+        }
+      }
+    }
+  }
+  &__maker{
+    width: 100%;
+    @include mq-up(xl){
+      width: 28%;
+    }
+    ul{
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-bottom: 15px;
+      @include mq-up(sm){
+        margin-bottom: 25px;
+        justify-content: flex-start;
+      }
+      @include mq-up(xl){
+        margin-bottom: 0px;
+        justify-content: space-between;
+      }
+    }
+    li{
+      margin-bottom: 5px;
+      width: 49%;
+      @include mq-up(sm){
+        width: 24%;
+        margin-right: 1%;
+      }
+      @include mq-up(xl){
+        width: 48%;
+        margin-right: 0px;
+      }
+      a{
+        display: block;
+        background: #fff;
+        text-align: center;
+        padding-top: 13px;
+        padding-bottom: 13px;
+        border-radius: 3px;
+
+        @include mq-up(sm){
+          padding-top: 15px;
+          padding-bottom: 15px;
+        }
+
+        img{
+          max-width: 100px;
+        }
+      }
+    }
+  }
+  &__other{
+    width: 100%;
+    @include mq-up(xl){
+      width: 38%;
+    }
+    ul{
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      @include mq-up(sm){
+        justify-content: flex-start;
+      }
+      @include mq-up(xl){
+        justify-content: space-between;
+      }
+      li{
+        width: 49%;
+        margin-bottom: 5px; 
+        @include mq-up(sm){
+          width: 24%;
+          margin-right: 1%;
+        }
+        @include mq-up(xl){
+          width: 48%;
+          margin-right: 0px;
+        }
+        a{
+          img{
+            border-radius: 3px;
+            }
+        }
+      }
+    }
+  }
+}
+
+/****bathroom*****/
+
+.ichibaLink_bathroombtn{
+  background: #eaf7ff;
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    li{
+      a{
+        display: block;
+      }
+      a:hover{
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+        display: block;
+        @include m-transition(box-shadow,0.3);
+      }
+    }
+  }
+  &__layout{
+    width: 100%;
+    @include mq-up(xl){
+      width: 67%;
+    }
+    ul{
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+      @include m-flex_row3(30%);
+      li{
+        width: 30%;
+        @include mq-up(sm){
+          width: 19%;
+          margin-right:1%;
+        }
+        margin-bottom: 10px;        
+        border: 1px solid #bfcecc;
+        &:last-of-type{
+          margin-right: 0%;
+        }
+        a{
+          box-shadow: 0 0 0px rgba(0, 0, 0, 0.3);
+          background: linear-gradient(#fff, #e4eff4); 
+        }
+      }
+    }
+  }
+  &__maker{
+    width: 100%;
+    @include mq-up(xl){
+      width: 30%;
+    }
+    ul{
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-bottom: 15px;
+      @include mq-up(sm){
+        margin-bottom: 25px;
+        justify-content: flex-start;
+      }
+      @include mq-up(xl){
+        margin-bottom: 0px;
+        justify-content: space-between;
+      }
+    }
+    li{
+      margin-bottom: 5px;
+      width: 49%;
+      @include mq-up(sm){
+        width: 24%;
+        margin-right: 1%;
+      }
+      @include mq-up(xl){
+        width: 48%;
+        margin-right: 0px;
+      }
+      a{
+        display: block;
+        background: #fff;
+        text-align: center;
+        padding-top: 13px;
+        padding-bottom: 13px;
+        border-radius: 3px;
+        @include mq-up(sm){
+          padding-top: 15px;
+          padding-bottom: 15px;
+        }
+        img{
+          max-width: 100px;
+        }
+      }
+    }
+  }
+}
+
+
+.worksGraph{
+background: #f7f7f7;
+padding-top: 20px;
+padding-bottom: 20px;
+margin-top: 40px;
+@include mq-up(sm){
+padding-top: 30px;
+padding-bottom: 30px;
+margin-top: 60px;
+}
+
+@include mq-up(lg){
+padding-top: 40px;
+padding-bottom: 40px;
+margin-top: 100px;
+}
+
+  .p-title_h3{
+    br{
+      display: block;
+      @include mq-up(md){
+        display: none;
+      }
+    }
+  }
+
+  .rateView{
+      &_result{
+        text-align: center;
+        margin-bottom: 10px;
+        @include mq-up(sm){
+         margin-bottom: 15px;         
+        }
+        @include mq-up(lg){
+            margin-bottom: 30px;      
+        }
+
+        span{
+          border-radius: 20px;       
+          color: $color_orange;
+          
+          padding: 8px 20px;
+          display: inline-block;
+          @include m-font-size(13);
+
+          @include mq-up(sm){
+           @include m-font-size(16);           
+          }
+          
+          @include mq-up(lg){
+            @include m-font-size(18);          
+          }
+
+          &.rate_kitchen{
+            background: #6dccc4;
+            color: #fff;
+          }
+          &.rate_toilet{
+            background: #44b3d4;
+            color: #fff;
+          }
+          &.rate_bathroom{
+            background: #3853a3;
+            color: #fff;
+          }
+          &.rate_toiletries{
+            background: #73cbe8;
+            color: #fff;
+          }
+          &.rate_naisou{
+            background: #447b31;
+            color: #fff;
+          }
+          &.rate_gaiheki{
+            background: #ed7f00;
+            color: #fff;
+          }
+          &.rate_exterior{
+            background: #e5e5e5;
+            color: #333;
+          }
+          &.rate_gaikou{
+            background: #704e05;
+            color: #fff;
+          }
+
+        }
+      }
+      &_txt{
+        text-align: right;
+        margin-top: 20px;
+        line-height: 1.6;
+        @include m-font-size(11);
+        @include mq-up(sm){
+                  @include m-font-size(12);
+        }
+      }
+
+      &_btn{
+        margin-top: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4px;
+        li{
+          
+          a{
+            display: block;
+            border: 1px solid #ccc;
+            background: #e3e3e3;
+            border-radius: 20px;
+            padding: 8px 10px;
+            @include m-alink(#000);
+            &:hover{
+                background: #333;
+                color: #fff;
+            }
+          }
+        }
+      }
+
+      .rateView_chart{
+        padding: 10px;
+        border: 2px solid #d3d3d3;
+        background: #fff;
+        @include mq-up(sm){
+          padding: 20px;
+          border-width: 3px;
+        }
+        @include mq-up(lg){
+          padding: 15px 25px;
+          border-width: 5px;
+        }
+      }
+  }
+}
+
+
+
+
+

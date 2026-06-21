@@ -1,0 +1,138 @@
+@charset "utf-8";
+
+/* =============================================================
+endContact
+============================================================== */
+.l-endContact{
+  background: url("../../img/foot_contact_bg.jpg") no-repeat center center / cover;
+  
+  
+  &_inner{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-top:20px;
+    padding-bottom:20px;
+    
+    @include mq-up(md){
+      justify-content: space-between;
+    }
+    
+    @include mq-up(lg){
+      padding-top:0;
+      padding-bottom:0;
+    }
+
+  }
+  
+  &_hiromi{
+    width:60%;
+    @include mq-up(md){
+      width:40%;
+      margin-bottom: -20px;
+      align-self: flex-end;
+    }
+    @include mq-up(lg){
+      width:50%;
+      margin-bottom: 0;
+    }
+    
+  }
+  
+  
+  
+  
+  &_txt{
+    width:70%;
+    margin-left: -30%;
+    color:#fff;
+    font-weight: bold;
+    //@include m-font-size(18);
+    font-size: calc(1.125rem + ((1vw - 3.6px) * 3));
+    min-height: 0vw;
+    line-height: 1.5;
+    text-align: center;
+    margin-bottom: 20px;
+
+    @include mq-up(sm){
+      @include m-font-size(22);
+    }
+    @include mq-up(md){
+      width:40%;
+      margin-left: -20%;
+      @include m-font-size(20);
+      line-height: 1.8;
+    }
+
+    @include mq-up(lg){
+      @include m-font-size(22);
+      line-height: 1.8;
+      width:30%;
+      margin-left: -25%;
+    }
+
+  }
+  
+  
+  
+  &_list{
+    width:100%;
+    @include mq-up(md){
+      width:36%;
+    }
+    @include mq-up(lg){
+      width:33.3%;
+    }
+    
+    li + li{
+      margin-top: 1px;
+    }
+    
+    a{
+      @include m-alink(#fff);
+      background: $color_main;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding:20px 0;
+      @include m-font-size(16);
+      font-weight: bold;
+      text-shadow: $shadow;
+
+      @include mq-up(md){
+        @include m-font-size(17);
+      }
+      @include mq-up(lg){
+        padding:25px 0;
+        @include m-transition(all);
+      }
+      @include mq-up(xl){
+        @include m-font-size(18);
+      }
+      
+      &:hover{
+        @include mq-up(lg){
+          background: #fff;
+          color: $color_main;
+          text-shadow: none;
+        }
+        
+        .icon{
+          @include mq-up(lg){
+            fill: $color_main;    
+          }
+        }
+      }
+    }
+    
+    .icon{
+      display: inline-block;
+      width:30px;
+      height:20px;
+      fill: #fff;
+      @include m-transition(all);
+    }
+  }
+}
+

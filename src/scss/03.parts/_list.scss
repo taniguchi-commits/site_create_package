@@ -1,0 +1,118 @@
+@charset "utf-8";
+
+/* =============================================================
+list.scss
+============================================================== */
+//通常形態
+
+.c-ul_basic{
+  padding-left:20px;
+  
+  li{
+    list-style: disc;
+    @include m-txt_sp;
+    
+    @include mq-up(sm){
+      @include m-txt_tab;      
+    }
+    @include mq-up(lg){
+      @include m-txt_pc;      
+    }
+    
+  }
+}
+
+
+.c-ol_basic{
+  padding-left:20px;
+  
+  li{
+    list-style: disc;
+    font-size: 100%;
+    @include m-txt_sp;
+    
+    @include mq-up(sm){
+      @include m-txt_tab;      
+    }
+    @include mq-up(lg){
+      @include m-txt_pc;      
+    }
+  }
+}
+
+
+// ※がつくやつ
+.c-li_attention{
+  li{
+    position: relative;
+    padding-left:20px;
+    text-indent: -15px;
+    font-size: 100%;
+    @include m-txt_sp;
+    
+    @include mq-up(sm){
+      @include m-txt_tab;  
+      line-height: 1.3;     
+    }
+    @include mq-up(lg){
+      @include m-txt_pc;  
+      line-height: 1.4;     
+    }
+    
+    & + li{
+      margin-top: 5px;
+    }
+    
+    &::before{
+      content: '※';      
+    }
+  }
+}
+
+// アイコンがつくやつ
+.c-li_icon{
+  li{
+    position: relative;
+    font-size: 100%;
+    
+    @include m-txt_sp;
+    line-height: 1.3;
+    
+    @include mq-up(sm){
+      @include m-txt_tab;    
+      line-height: 1.3;  
+    }
+    @include mq-up(lg){
+      @include m-txt_pc; 
+      line-height: 1.4;     
+    }
+    
+    & + li{
+      margin-top: 5px;
+      @include mq-up(lg){
+        margin-top: 8px;
+      }
+    }
+  }
+}
+
+.c-li_icon--orange{
+  i{
+    color: $color_orange;
+  }
+}
+
+
+// フォントサイズ
+.c-li_small{
+  li{
+    @include m-font-size(12);
+    
+    @include mq-up(sm){
+      @include m-font-size(13);     
+    }
+    @include mq-up(lg){
+      @include m-font-size(13);   
+    }
+  }
+}

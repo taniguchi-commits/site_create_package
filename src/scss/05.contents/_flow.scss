@@ -1,0 +1,99 @@
+@charset "utf-8";
+
+/* =============================================================
+flow.scss
+============================================================== */
+.flowStep{
+  margin-top: 40px;
+  
+  @include mq-up(sm){
+    margin-top: 50px;
+  }
+  
+  @include mq-up(lg){
+    margin-top: 60px;
+  }
+}
+
+.flow{
+    
+  @include mq-up(sm){
+    display: flex;
+  }
+  
+  & + &{
+    margin-top: 40px;
+  }
+  
+  &_no{
+    background: $color_main;
+    color:#fff;
+    @include m-font-size(12);
+    font-weight: bold;
+    padding:10px;
+    text-align: center;
+    
+    @include mq-up(sm){
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    
+    span{
+      font-size: 200%;
+      position: relative;
+      
+      @include mq-up(lg){
+        display: block;
+      }
+    }
+  }
+  
+  &_inner{
+    padding:20px;
+    @include mq-up(md){
+      display: flex;
+    }
+    @include mq-up(xl){
+      padding:30px;
+    }
+  }
+  
+  &_img{
+    text-align: center;
+    margin-bottom: 20px;
+    
+    @include mq-up(md){
+      width:200px;
+      margin-bottom: 0;
+    }
+  }
+  
+  &_txtarea{   
+    @include mq-up(md){
+      flex:1;
+      max-width: 100%;
+      padding-left:20px;
+    }
+  }
+  
+  .btn{
+    margin-top: 20px;
+    max-width: 290px;
+    a{
+      margin:0px auto;
+    }
+  }
+  
+  
+  &_title{
+    @include m-font-size(18);
+    line-height: 1.3;
+    margin-bottom: 15px;
+    
+    @include mq-up(md){
+    @include m-font-size(20);
+    }
+  }
+}

@@ -1,0 +1,43 @@
+@charset "utf-8";
+
+/* =============================================================
+space.scss
+============================================================== */
+// コンテンツの上下幅
+
+.space--large{
+	padding-top: $space_large / 2;
+	padding-bottom:  $space_large / 2;
+	@include mq-up(sm) {
+		padding-top:$space_large - 40px;
+		padding-bottom: $space_large - 40px;
+	}
+	@include mq-up(lg) {
+		padding-top: $space_large;
+		padding-bottom: $space_large;
+	}
+}
+.space--medium{
+	padding-top: $space_medium / 2;
+	padding-bottom:  $space_medium / 2;
+	@include mq-up(sm) {
+		padding-top:$space_medium - 25px;
+		padding-bottom: $space_medium - 25px;
+	}
+	@include mq-up(lg) {
+		padding-top: $space_medium;
+		padding-bottom: $space_medium;
+	}
+}
+.space--small{
+	padding-top: $space_small / 2;
+	padding-bottom:  $space_small / 2;
+	@include mq-up(sm) {
+		padding-top:$space_small - 15px;
+		padding-bottom: $space_small - 15px;
+	}
+	@include mq-up(lg) {
+		padding-top: $space_small;
+		padding-bottom: $space_small;
+	}
+}

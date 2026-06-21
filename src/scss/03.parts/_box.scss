@@ -1,0 +1,397 @@
+@charset "utf-8";
+
+/* =============================================================
+txt.scss
+============================================================== */
+//装飾ボックス
+
+
+// シャドウと右下角丸
+.c-shadowBox{
+  box-shadow: $shadow;
+  border-radius: 0 0 20px 0;
+  @include m-transition(all);
+  
+  @at-root a#{&}{
+    &:hover{
+      @include mq-up(lg){
+        box-shadow: $shadow_hover;
+      }
+    }
+  }
+}
+
+/*************************/
+
+.worksSearchform {
+
+  &__inner{
+  box-sizing: border-box;
+  margin-bottom: 10px;
+
+  @include mq-up(sm){
+     margin-bottom: 15px; 
+  }
+  
+  @include mq-up(lg){
+   margin-bottom: 15px;   
+  }
+
+    &--padding{
+      padding: 10px;
+      background: #fff;
+      @include mq-up(sm){}
+
+      @include mq-up(lg){
+        padding: 20px;
+      }
+    }
+  }
+
+  &__caution{
+    text-align: right;
+    @include m-font-size(11);
+    margin-top: 12px;
+
+    @include mq-up(sm){
+      margin-top: 15px;
+      @include m-font-size(12);
+    }
+
+    @include mq-up(lg){
+      margin-top: 20px;
+      @include m-font-size(13);
+    }
+  }
+
+  &__list{
+
+    background: #f1f1f1;
+    padding: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    @include mq-up(sm){
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      margin-bottom: 15px;
+    }
+
+  
+    @include mq-up(lg){
+        padding: 10px 30px;
+             
+    }   
+
+    &--margin{
+      margin-bottom: 10px;
+    }
+
+    ul{
+      display: flex;
+      flex-wrap: wrap;
+
+      li{
+        width: 50%;
+        padding: 3px;
+        @include m-font-size(12);
+        
+        @include mq-up(ss){
+          width: 50%;
+        }
+
+        @include mq-up(sm){
+          width: 33%;
+          @include m-font-size(13);
+          padding: 3px;
+        }
+
+        @include mq-up(md){
+          @include m-font-size(14);
+          padding: 4px;
+        }
+
+        @include mq-up(lg){
+          @include m-font-size(15);
+          width: 24%;
+          padding: 5px;
+        }
+        span{
+          display: block;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+
+        }
+
+        label{
+          display: flex;
+          align-items: center;
+        }
+
+      }
+    }
+  }
+}
+
+
+.worksSearchform__keyword{
+
+  background: #f1f1f1;
+  padding: 10px;
+  margin-top: 15px;
+
+  @include mq-up(sm){
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+
+  
+  @include mq-up(lg){
+      padding: 10px 30px;
+  }
+
+
+
+
+  @include mq-up(sm){
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__txt{
+    width: 130px;
+    @include m-font-size(15);
+    font-weight: bold;
+    margin-right: 20px;
+    margin-bottom: 5px;
+    @include mq-up(sm){
+      margin-bottom: 0px;
+      @include m-font-size(16);
+    }
+    @include mq-up(lg){
+      @include m-font-size(18);
+    }
+  }
+
+  &__box{
+    width: 100%;
+    margin-bottom: 5px;
+    @include mq-up(sm){
+      display: flex;
+      align-items: center;
+      flex:1;
+      margin-bottom: 0px;
+    }
+  }
+
+  &__input{
+    display: flex;
+    width: 100%;
+    margin-bottom: 5px;
+    @include mq-up(sm){
+      margin-bottom: 0px;
+    }
+    .s_search{
+      width: 100%;
+      display: block;
+    }
+  }
+
+  &__btn{
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+    margin-top: 15px;
+    @include mq-up(sm){
+      margin-left: 25px;
+      margin-bottom: 0px;
+    }
+
+    &--btm{
+      margin-bottom: 0px;
+    }
+
+    input.btn_submit{
+        cursor: pointer;
+        display: block;
+        width: 112px;
+        height: 44px;
+        border: none;
+        text-indent: -9999px;
+        background: url(../../img/works/search_btn.png) no-repeat 0 0;
+    }
+  }
+}
+
+.worksSearch__number{
+    text-align: right;
+    clear: both;
+    overflow: hidden;
+    margin-bottom: 10px;
+    @include m-font-size(14);
+    @include mq-up(sm){
+      margin-bottom: 20px;
+      @include m-font-size(15);
+    }
+
+    @include mq-up(lg){
+      margin-bottom: 30px;
+      @include m-font-size(17);
+    }
+}
+
+
+.worksSearchform__price{
+  background: #f1f1f1;
+  padding: 10px;
+
+
+  @include mq-up(sm){
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+
+  
+  @include mq-up(lg){
+      padding: 10px 30px;
+  }
+
+  &__txt{
+    width: 130px;
+    @include m-font-size(15);
+    font-weight: bold;
+    margin-right: 20px;
+    margin-bottom: 5px;
+    @include mq-up(sm){
+      margin-bottom: 0px;
+      @include m-font-size(16);
+    }
+    @include mq-up(lg){
+      @include m-font-size(18);
+    }
+  }
+
+  &__box{
+    width: 100%;
+    
+    display: flex;
+    align-items: center;
+    @include mq-up(sm){
+
+      flex:1;
+      margin-bottom: 0px;
+    }
+  }
+
+  &__input{
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    @include m-font-size(12);
+    @include mq-up(sm){
+      margin-bottom: 0px;
+      @include m-font-size(13);
+    }
+    @include mq-up(lg){
+      @include m-font-size(14);
+    }
+
+     input{
+      margin-right: 5px;
+     }
+  }
+
+  &__btn{
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+    @include mq-up(sm){
+      margin-left: 25px;
+      margin-bottom: 0px;
+    }
+
+    &--btm{
+      margin-bottom: 0px;
+    }
+
+    input.btn_submit{
+        cursor: pointer;
+        display: block;
+        width: 112px;
+        height: 44px;
+        border: none;
+        text-indent: -9999px;
+        background: url(../../img/works/search_btn.png) no-repeat 0 0;
+    }
+  }
+}
+
+
+.relationBanner{
+  margin-top:25px;
+  @include mq-up(md){
+    background: #f5f5f5;
+    padding: 15px;
+    margin-top:60px;
+    display: flex;
+    justify-content: center;
+    gap: 2%;
+    @include mq-up(lg){
+      padding: 20px;
+    }
+  }
+
+  li{
+    text-align: center;
+    margin-top: 15px;
+    @include mq-up(md){
+      margin-top: 0px;
+    }
+
+  }
+   
+}
+
+
+
+.tooltip-box {
+  line-height: 1.4;
+  @include mq-up(lg){
+    position: absolute;
+    background: #000;
+    color: #fff;
+    padding: 6px 10px;
+    @include m-font-size(12);
+    border-radius: 4px;
+    pointer-events: none;
+    opacity: 0;
+    transition: 0.15s;
+    z-index: 9999;
+    display:block;
+    max-width:300px;
+  }
+}
+
+.js-tooltip{
+    @include mq-up(lg){
+      text-decoration:underline;
+      position:relative;
+      display:inline;
+    }
+}
+
+.visitArea{
+  .js-tooltip{
+    display:inline-block;
+  }
+}
+
+
+
+

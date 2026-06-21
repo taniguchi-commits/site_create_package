@@ -1,0 +1,40 @@
+@charset "utf-8";
+
+/* =============================================================
+groupLink
+============================================================== */
+.l-groupLink{
+  background: url("../../img/bg01.gif") repeat left top;
+  
+  &_inner{
+    padding-top:20px;
+    padding-bottom: 20px;
+  }
+  
+  &_list{
+    display: flex;
+    flex-wrap: wrap;
+      
+    @include mq-up(md){
+    }
+    
+    li{
+      width:50%;
+      padding:0px 5px;
+      margin-bottom: 10px;
+
+      @include mq-up(sm){
+        width:33.3%;     
+      }
+      
+      @include mq-up(md){
+        width:25%;
+      }
+      
+      @include mq-up(lg){
+        width:20%;
+      }
+    }
+  }
+}
+

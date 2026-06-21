@@ -1,0 +1,301 @@
+@charset "utf-8";
+
+/* =============================================================
+point.scss
+============================================================== */
+/* pointMenu
+--------------------------------*/
+
+.pointMenu{
+  margin-bottom: 30px;
+  @include mq-up(lg){
+    margin-bottom: 40px;
+  }
+  a{
+    display: block;
+    padding:10px 10px 0 10px;
+    @include m-alink;
+    
+    @include mq-up(lg){
+      padding:10px 15px 0 15px;
+    }
+  }
+  
+  &_title{
+    @include m-font-size(18);
+    line-height: 1.3;
+    text-align: center;
+    margin-bottom: 10px;
+    padding:15px 0;
+    
+    @include mq-up(lg){
+      @include m-font-size(20);
+    }
+  }
+  
+  &_txt{
+    @include m-font-size(13);
+    line-height: 1.3;
+    padding:15px 0;
+    
+    @include mq-up(lg){
+      @include m-font-size(14);
+      line-height: 1.5;
+    }
+  }
+  
+  /*.c-moreLink{
+    margin-right: -20px;
+  } */
+}
+
+
+
+
+/* 種類別
+--------------------------------*/
+.pointIntro_list{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background: $color_bg;
+  padding:20px;
+  
+  @include mq-up(sm){
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  @include mq-up(lg){
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  
+  i{
+    color: $color_orange;
+  }
+}
+
+
+
+.pointIntro_menu{
+  @include mq-up(sm){
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
+.pointIntro-item{
+  max-width:360px;
+  margin:0px auto 20px auto;
+  border:1px solid $color_border;
+  
+  @include mq-up(sm){
+    width: 48%;
+    margin:0 0 20px 0;
+    max-width:none;
+  }
+  @include mq-up(lg){
+    margin:0 0 40px 0;
+  }
+  
+  a{
+    display: block;
+    @include m-alink;
+  }
+
+  
+  &_ph{
+    text-align: center;
+  }
+    
+  &_inner{
+    padding:15px 10px;
+    @include mq-up(sm){
+      padding:20px;
+    }
+  }
+  
+  &_title{
+    text-align: center;
+    @include m-font-size(16);
+    line-height: 1.3;
+  }
+  &_txt{
+    @include m-font-size(13);
+    line-height: 1.3;
+    margin-top: 15px;
+  }
+  &_btn{
+    max-width:290px;
+    margin:20px auto 0 auto;
+  }
+
+  
+}
+
+
+
+
+
+
+/* pointDetail
+--------------------------------*/
+.pointKitchenLayout{
+  width:100%;
+  display: flex;
+  
+  &_img{
+    width:190px;
+  }
+  
+  &_txt{
+    flex:1;
+    max-width:100%;
+  }
+}
+
+
+
+.pointProduct{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  
+/*	@include mq-up(sm){
+    margin-top:-20px;
+    }
+    @include mq-up(lg){
+    margin-top:-30px;
+    } */
+  
+  &_item{
+    width:100%;
+    margin-top:20px;
+    
+    @include mq-up(sm){
+    width:49%;
+    margin-top:30px;
+    max-width: none;
+    }
+    @include mq-up(lg){
+    margin-top:40px;
+    }
+    
+    figcaption{
+      background: $color_bg;
+      padding:5px;
+      @include m-font-size(12);
+      line-height: 1.3;
+      margin-top: 5px;
+  
+      @include mq-up(sm){
+        @include m-font-size(13);
+      }
+      @include mq-up(lg){
+        @include m-font-size(14);
+        padding:10px;
+      }
+      
+      strong{
+        display: inline-block;
+        color:$color_main;
+      }
+    }
+  }
+  
+  //横3つ並ぶとき
+  &--row3{
+    width:100%;
+
+    .pointProduct_item{
+      @include mq-up(sm){      
+      width:32.5%;
+      }
+    }
+
+    &.point-gatepost .pointProduct_item{
+      @include mq-up(ss){
+        width: 49%;
+        margin-top: 30px;
+        max-width: none;
+      }
+      @include mq-up(sm){
+        width:32.5%;
+      }
+    }
+  }
+  
+  
+}
+
+
+.p-title_h2 + .pointProduct{
+  margin-top:-20px;
+  @include mq-up(sm){
+    margin-top:-30px;
+  }
+  @include mq-up(lg){
+    margin-top:-40px;
+  }
+}
+
+
+
+.pointTbl{
+width: 100%;
+border-top: 1px solid $color_orange;
+border-left: 1px solid $color_orange;
+margin-top: 20px;
+  
+  th,td{
+    padding: 8px 15px;
+    font-size: 108%;
+    border-right: 1px solid $color_orange;
+    border-bottom: 1px solid $color_orange;
+    @include mq-down(sm){
+    padding: 4px 8px;
+    }
+  }
+  th{
+    color: #562C00;
+    text-align: center;
+    background: #fafafa;
+    line-height: 120%;
+  }
+  td{
+    line-height: 160%;
+  }
+}
+
+
+.pointPh{
+  text-align: center;
+  margin:10px auto;
+  @include mq-up(sm){
+    margin:20px auto;
+  }
+  @include mq-up(lg){
+    margin:30px auto;
+  }
+}
+
+
+
+/* Bathroom
+--------------------------------*/
+
+.pointBathSize{
+	display:block;
+  margin-bottom:20px;
+	@include mq-up(lg){
+      display:flex;
+      justify-content: space-between;
+      div:first-of-type{
+        margin-right:20px;
+        margin-bottom:0;
+      }
+	  }
+}
+
+
+
+

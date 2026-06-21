@@ -1,0 +1,230 @@
+@charset "utf-8";
+
+/* =============================================================
+title.scss
+============================================================== */
+
+//タイトルの下部
+.c-title_mb--lg{
+  margin-bottom: 40px;
+
+  @include mq-up(sm){
+    margin-bottom: 50px;
+  }
+  @include mq-up(lg){
+    margin-bottom: 60px;
+  }  
+}
+
+.c-title_mb--md{
+  margin-bottom: 30px;
+
+  @include mq-up(sm){
+    margin-bottom: 40px;
+  }
+  @include mq-up(lg){
+    margin-bottom: 50px;
+  }  
+}
+
+
+.c-title_mb--sm{
+  margin-bottom: 20px;
+
+  @include mq-up(sm){
+    margin-bottom: 25px;
+  }
+  @include mq-up(lg){
+    margin-bottom: 30px;
+  }  
+}
+
+.c-title_mb--ss{
+  margin-bottom: 20px;
+
+  @include mq-up(sm){
+    margin-bottom: 20px;
+  }
+  @include mq-up(lg){
+    margin-bottom: 20px;
+  }  
+}
+
+
+
+
+//タイトル群
+
+
+.title_basic{
+  font-weight: bold;
+  @include m-font-size(22);
+  
+  @include mq-up(sm){
+    @include m-font-size(25);
+  }
+  @include mq-up(lg){
+    @include m-font-size(28);
+  }
+}
+
+.title_basic--white{
+  color:#fff;
+}
+
+
+
+.p-title_h1{
+  font-weight: normal;
+  background: #fff;
+  padding:15px;
+  line-height: 1.3;
+  display: inline-block;
+  @include m-font-size(30);
+  
+  @include mq-up(sm){
+    padding:15px;
+    @include m-font-size(40);
+  }
+  
+  @include mq-up(lg){
+    @include m-font-size(54);
+    padding:15px 20px;
+  }
+  
+  
+  //black
+  &--black{
+    background: #000;
+    color:#fff;
+  }
+}
+
+
+.p-title_h2{
+  @include m-font-size(20);
+  border-top: 2px solid $color_orange;
+  color: #fff;
+  font-weight: normal;
+  letter-spacing: 0.1rem;
+  margin-bottom: 30px;
+  
+  @include mq-up(sm){
+    @include m-font-size(22);
+    margin-bottom: 40px;
+  }
+  @include mq-up(lg){
+    @include m-font-size(24);
+    margin-bottom: 50px;
+  }
+  
+  span{
+    background: $color_orange;
+    display: inline-block;
+    padding:5px 10px;
+    line-height: 1.2;
+    @include mq-up(sm){
+      padding:10px 20px;
+    }
+    @include mq-up(lg){
+      padding:10px 20px;
+    }
+  }
+  strong{
+    color:#000;
+    font-weight: bold;    
+  }
+}
+
+
+.p-intro_ttl{
+  margin-left: 10px;
+  @include m-font-size(18);
+  @include mq-up(sm){
+    @include m-font-size(20);
+  }
+
+  @include mq-up(md){
+    @include m-font-size(22);
+  }
+
+  @include mq-up(lg){
+    @include m-font-size(25);
+  }
+
+}
+
+.p-intro_txt{
+  margin-left: 10px;
+}
+
+.p-title_h3{
+  @extend .title_basic;
+  line-height: 1.3;
+}
+
+
+.p-title_h4{
+  @include m-font-size(20);
+  display: flex;
+  align-items: center;
+  line-height: 1.3;
+  
+  @include mq-up(sm){
+    @include m-font-size(22);
+  }
+  @include mq-up(lg){
+    @include m-font-size(24);
+  }
+  
+  span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("../../img/bubble.svg") no-repeat center center / contain;
+    width:33px;
+    height:30px;
+    color:#fff;
+    font-size: 90%;
+    margin-right: 10px;
+    padding-right: 3px;
+    
+    @include mq-up(lg){
+      width:43px;
+      height:40px;
+    }
+  }
+  
+  .is-spView{
+    display: inline;
+    
+    @include mq-up(lg){
+      display: none;
+    }
+  }
+  
+  &--orange{
+    color: $color_orange;
+  }
+}
+
+
+//見出し
+.p-midashi01{
+  @include m-font-size(16);
+  line-height: 1.3;
+  margin-bottom: 10px;
+  
+  @include mq-up(sm){
+    @include m-font-size(18);
+    margin-bottom: 15px;
+  }
+  @include mq-up(lg){
+    @include m-font-size(20);
+    margin-bottom: 15px;
+  }
+  
+  strong{
+    color: $color_orange;
+  }
+}

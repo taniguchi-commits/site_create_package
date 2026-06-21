@@ -1,0 +1,80 @@
+@charset "utf-8";
+
+/* =============================================================
+ichibaLink
+============================================================== */
+.ichibaLink{
+  &__inner{
+
+    padding: 20px 20px 10px 20px;
+    max-width: 1160px;
+    width: 100%;
+    margin: 0 auto;
+
+    @include mq-up(sm){
+      padding-top:30px;
+      padding-bottom: 10px;
+    }
+
+    @include mq-up(lg){
+      padding: 40px 40px 20px 40px;
+    }
+
+    &--padding{
+      padding-top: 30px;
+      padding-left: 0px;
+      padding-right: 0px;
+
+      @include mq-up(sm){
+        padding-top: 40px;
+      }
+
+      @include mq-up(lg){
+        padding-top: 70px;
+      }
+
+    }
+
+  }
+  
+  &__list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap :2%;
+    @include mq-up(md){
+    }
+    
+    li{
+      width:100%;
+      padding:0px 5px;
+      text-align: center;
+      margin-bottom: 10px;
+      @include mq-up(sm){
+        width:48%;
+        margin-bottom: 10px;  
+      }
+
+      @include mq-up(md){
+        width:42%;
+        margin-bottom: 10px;      
+      }
+      
+      @include mq-up(lg){
+        width:32%;
+        margin-bottom: 20px;
+      }
+
+      a{
+        opacity: 1;
+        @include m-transition(opacity,0.8);
+        &:hover{
+          opacity: 0.8;
+          @include m-transition(opacity,0.8);
+        }
+      }
+
+    }
+  }
+}
+

@@ -1,0 +1,59 @@
+@charset "utf-8";
+
+/* =============================================================
+txt.scss
+============================================================== */
+//基本的なテキストの設定
+
+
+/* text style
+---------------------------------------------*/
+.txtbox p,
+.txt{
+	@include m-txt_sp;
+}
+.txtbox p + p,
+.txt + .txt{
+	margin-top:15px;
+}
+
+@include mq-up(sm) {
+	.txtbox p,
+	.txt{
+		@include m-txt_tab;
+	}
+	.txtbox p + p,
+	.txt + .txt{
+		margin-top:20px;
+	}
+}
+@include mq-up(lg) {
+	.txtbox p,
+	.txt{
+		@include m-txt_pc;
+	}
+}
+
+
+
+
+
+// 装飾
+.c-underline{
+  display: inline-block;
+  padding:0 2px 2px 2px;
+  
+  &--orange{
+    background: linear-gradient(transparent 60%, rgba($color_orange,0.6) 60%);
+  }
+}
+
+
+// sp:左寄せ sm:センター
+.c-txtCenter{
+  text-align: left;
+    
+  @include mq-up(sm) {
+    display: compact;
+  }
+}

@@ -1,0 +1,148 @@
+
+@charset "utf-8";
+
+// =============================================================
+// base_mixin.css
+// ==============================================================
+// 
+// 便利に使いたい変数
+// ミックスインは m- で管理する
+// 
+
+
+// メディアクエリ---------------------------------------------------
+// https://hashimotosan.hatenablog.jp/entry/2020/12/06/182327
+
+// モバイルファースト
+// @include mq-up(tab) 
+$breakpoint-up: (
+  'ss': 'screen and (min-width: 360px)', //最小
+  'sm': 'screen and (min-width: 560px)', //タブサイズ開始
+  'md': 'screen and (min-width: 768px)', //中間
+  'lg': 'screen and (min-width: 960px)', //PCサイズ開始
+  'xl': 'screen and (min-width: 1200px)', //調整
+  'xxl': 'screen and (min-width: 1300px)', //調整
+) !default;
+
+@mixin mq-up($breakpoint: md) {
+  @media #{map-get($breakpoint-up, $breakpoint)} {
+    @content;
+  }
+}
+
+// PCファースト
+// @include mq-down(tab) 
+$breakpoint-down: (
+  'ss': 'screen and (max-width: 359px)',
+  'sm': 'screen and (max-width: 599px)',
+  'md': 'screen and (max-width: 767px)',
+  'lg': 'screen and (max-width: 959px)',
+  'xl': 'screen and (max-width: 1199px)',
+) !default;
+
+@mixin mq-down($breakpoint: md) {
+  @media #{map-get($breakpoint-down, $breakpoint)} {
+    @content;
+  }
+}
+
+
+
+
+
+// テキスト--------------------------------------------------------
+
+// フォントサイズをrem指定、sizeでpxの数値を入れると自動計算、1rem=16px
+@mixin m-font-size($size) {
+  font-size: ($size / 16) + rem;
+}
+
+// ベース
+@mixin m-txt_sp {
+	@include m-font-size($m-fontSize_sp);
+	line-height:1.8;
+}
+@mixin m-txt_tab {
+	@include m-font-size($m-fontSize_tab);
+}
+@mixin m-txt_pc {
+	@include m-font-size($m-fontSize_pc);
+	line-height:1.8;
+}
+
+
+// アイコンフォント-------------------------------------------------
+// Font Awesomeの疑似要素
+// \をつけずに代入する。
+// ▼例：
+//　@include m-fa_icon(f105,900)
+@mixin m-fa_icon($faicon,$faweight:900) {
+  font-family: "Font Awesome 5 Free";
+  //content: '#{$faicon}';
+  //content: unquote("\"") + $faicon + unquote("\"");
+  content: unquote("\"") + unquote(str-insert($faicon, "\\", 1)) + unquote("\"");
+  font-weight: $faweight;
+}
+
+
+
+// フォントファミリー-----------------------------------------------
+// Googleフォント等
+
+// Source Sans Pro // Extra-light 200 | Regular 400 | Semi-bold 600
+
+@mixin m-ff_sourcesans($ffweight: 200){
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: $ffweight;
+}
+
+
+
+
+// text-shadow --------------------------------------------------------- 
+@mixin m-outline($color){
+	text-shadow: 
+    $color 2px 0px, $color -2px 0px,
+    $color 0px -2px, $color -2px 0px,
+    $color 2px 2px, $color -2px 2px,
+    $color 2px -2px, $color -2px -2px,
+    $color 1px 2px, $color -1px 2px,
+    $color 1px -2px, $color -1px -2px,
+    $color 2px 1px, $color -2px 1px,
+    $color 2px -1px, $color -2px -1px;
+}
+
+
+
+// flex-box space-between の対応----------------------------------
+// 3カラムの場合
+@mixin m-flex-row3($width:33.3%) {
+	&::after{
+		content:"";
+		display: block;
+		width: $width;
+	}
+}
+// 4カラムの場合
+@mixin m-flex-row4($width:25%) {
+	&::before{
+		content:"";
+		display: block;
+		width:$width;
+		order:1;
+	}
+	&::after{
+		content:"";
+		display: block;
+		width:$width;
+	}
+}
+
+// transition ----------------------------------
+@mixin m-transition($properties,$speed:0.1){
+  transition: $properties $speed + s;
+}
+
+
+
+

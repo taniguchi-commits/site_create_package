@@ -1,0 +1,30 @@
+@charset "utf-8";
+
+/* =============================================================
+link.scss
+============================================================== */
+
+
+// 斜め矢印
+.c-moreLink{  
+  padding:0px 25px 15px 15px;
+  /*margin-right: 20px;*/
+  margin:0 auto;
+  text-align: right;
+  background: url("../../img/icon_arrow_naname.svg") no-repeat right top;
+  color:$color_main;
+  @include m-font-size(12);
+  @include m-ff_sourcesans(600);
+  text-transform: uppercase;
+  @include m-transition(all,0.2); 
+  width:calc(100% - 20px); //flexbox対策
+  
+  a:hover &{
+    @include mq-up(lg){
+      padding:5px 30px 15px 15px;
+      margin: -5px auto 0 auto;
+      width:calc(100% - 15px);
+    }
+  }
+}
+

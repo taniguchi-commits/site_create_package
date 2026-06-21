@@ -1,0 +1,136 @@
+@charset "utf-8";
+
+/* =============================================================
+news.scss
+============================================================== */
+
+/* list
+--------------------------------------*/
+.newsList-item{
+  border-bottom: 1px solid $color_border;
+  
+  a{
+    display: block;
+    padding:15px 0;
+    @include m-alink;
+  
+    @include mq-up(sm){
+      padding:15px;
+    }
+    @include mq-up(lg){
+      display: flex;
+      padding:25px 30px;
+    }
+    
+    &:hover{
+      .newsList-item_title{
+        text-decoration: underline;
+      }
+    }
+  }
+  
+  &_data{
+    padding-bottom: 3px;
+    @include m-font-size(12);
+    line-height: 1.5;
+    padding-right: 10px;
+    padding-top: 2px;
+  
+    @include mq-up(sm){
+      @include m-font-size(13);
+      padding-bottom: 5px;
+    }
+    @include mq-up(lg){
+      @include m-font-size(14);
+      padding-bottom: 0px;
+    }
+    
+    time{
+      color:$color_main;
+      margin-right: 10px;
+    }
+    
+    span{
+      border-left:1px solid #b5b5b5;
+      display: inline-block;
+      padding:0px 5px;
+      width:120px;
+      text-align: center;
+  
+      @include mq-up(lg){
+        border-right:1px solid #b5b5b5;
+      }
+    }
+  }
+  
+  &_title{
+    @include m-font-size(15);  
+    line-height: 1.5;
+    font-weight: 500;
+    @include m-transition(text-decoration);
+    
+    @include mq-up(sm){
+      @include m-font-size(16);
+    }
+    
+    @include mq-up(lg){
+      flex:1;
+      max-width: 100%;
+    }
+    
+  }
+  
+}
+
+
+
+
+
+
+/* entry
+--------------------------------------*/
+.newsEntry_headding{
+  border-bottom: 1px solid $color_border;
+  padding-bottom:15px;
+  margin-bottom: 30px;  
+  
+  @include mq-up(sm){
+    margin-bottom: 50px;  
+  }
+  @include mq-up(lg){
+    margin-bottom: 70px;  
+  }
+  
+  &_data{    
+    padding-top: 10px;
+    @include m-font-size(12);
+    line-height: 1.5;
+  
+    @include mq-up(sm){
+      @include m-font-size(13);
+      padding-bottom: 5px;
+    }
+    @include mq-up(lg){
+      @include m-font-size(14);
+    }
+  }
+  
+  
+  
+  &_title{
+    @include m-font-size(20);
+    line-height: 1.3;
+  
+    @include mq-up(sm){
+      @include m-font-size(28);
+      padding-bottom: 5px;
+    }
+    @include mq-up(lg){
+      @include m-font-size(34);
+      line-height: 1.2;
+    }
+  }
+}
+
+
+

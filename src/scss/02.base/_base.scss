@@ -1,0 +1,36 @@
+@charset "utf-8";
+
+/* =============================================================
+base.scss
+============================================================== */
+body {
+  line-height:1;
+	font-family: Verdana, "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", sans-serif;
+	font-weight:500;
+}
+
+a { /*outline:none;*/ }
+a:link,a:visited { color: #1530A0; text-decoration:underline; }
+a:hover,a:active { color: #4460D5; text-decoration:none;  }
+
+
+
+
+// font extend  --------------------------------------------------------- 
+// @extend で使うこと前提
+.mincho{
+	font-family:"游明朝",YuMincho,"ヒラギノ明朝 ProN W3","Hiragino Mincho ProN","HG明朝E";
+}
+.ygothic{
+	font-family:"游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", sans-serif;
+}
+.gothic{
+	font-family:Verdana, "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", sans-serif;
+}
+
+
+
+
+
+//---------------------*/
+

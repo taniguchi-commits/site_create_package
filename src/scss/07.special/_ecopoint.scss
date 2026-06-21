@@ -1,0 +1,255 @@
+@charset "utf-8";
+
+/* =============================================================
+ecopoint.css
+============================================================== */
+
+.kodomoeco_ttl{
+
+  margin-bottom: 30px;
+  @include m-font-size(20);
+  font-weight: 400;
+  line-height: 1.7;
+  margin-bottom: 20px;
+  font-weight: bold;
+
+  @include mq-up(sm){
+    @include m-font-size(22);
+    text-align: center;
+    margin-bottom: 25px;
+  }
+
+  @include mq-up(lg){
+    @include m-font-size(25);
+    line-height: 1.4;
+    margin-bottom:60px;
+  }
+
+  &-center{
+    @include mq-up(ss){
+      text-align: center;
+    }
+
+
+  }
+
+}
+
+.kodomoeco_ph{
+  text-align: center;
+  margin-top:15px;
+    @include mq-up(sm){
+    margin-bottom: 20px;
+  }  
+  @include mq-up(lg){
+    margin-bottom: 30px;
+  }
+
+}
+
+
+
+.kodomoeco_promo{
+  margin-bottom: 40px;
+  text-align: center;
+  
+  @include mq-up(sm){
+    margin-bottom: 50px;
+  }  
+  @include mq-up(lg){
+    margin-bottom: 60px;
+  }
+}
+
+
+.kodomoeco_notes{
+  margin-top: 20px;
+  
+  li{
+    padding-left:30px;
+    text-indent: -30px;
+    position: relative;
+    counter-increment: num 1;
+    @include m-font-size(12);
+    line-height: 1.5;
+    
+    @include mq-up(sm){
+      @include m-font-size(13);
+    }
+    
+    &::before{
+      content: "※" counter(num);
+      margin-right: 10px;
+    }
+    
+    & + li{
+      margin-top: 5px;
+    }
+  }
+}
+
+
+
+.kodomoeco_link{
+  margin-top: 40px;
+  @include mq-up(sm){
+    margin-top: 60px;
+  }
+  @include mq-up(lg){
+    margin-top: 80px;
+  }
+  
+  .btn{
+    max-width:550px;
+    margin:0px auto 20px auto;
+  }
+  
+  a{
+    @include m-font-size(14);
+    font-weight: bold;
+    line-height: 1.3;
+    @include mq-up(sm){
+      @include m-font-size(17);
+    }
+    @include mq-up(lg){
+      @include m-font-size(20);
+    }
+    
+    span{
+      display: block;
+      @include m-font-size(12);
+      margin-top: 5px;
+      font-weight: normal;
+      @include mq-up(sm){
+        @include m-font-size(13);
+      }
+      @include mq-up(lg){
+        @include m-font-size(14);
+      }
+    }
+    
+    br{
+      @include mq-up(ss){
+        display: none;
+      }
+    }
+  }
+  
+  .btn + p{
+    @include m-font-size(14);
+    line-height: 1.5;
+    text-align: center;
+  }
+}
+
+
+.ecopoint_btn{
+	display:flex;
+	justify-content: space-between;
+	margin-top:30px;
+}
+
+
+.kodomoeco_table{
+    margin-top: 10px;
+    margin-bottom: 25px;
+    line-height: 1.6;
+    font-feature-settings: "palt";
+    overflow-x:auto;
+
+    @include mq-up(sm){
+      margin-top: 15px;
+    }
+
+    @include mq-up(lg){
+      margin-top: 20px;
+    }
+
+    table{
+      border: 1px solid $color_gray;
+      width: 600px;
+      @include mq-up(sm){
+        width: 100%;
+        max-width: initial;
+      }
+
+      th ,td{
+        border: 1px solid $color_gray;
+
+        padding: 10px;
+
+        @include mq-up(sm){
+          padding: 13px;
+        }
+
+        @include mq-up(lg){
+          padding: 16px;
+        }
+
+      }
+
+      th{
+        background: #efefef;
+        @include m-font-size(13);
+
+        @include mq-up(sm){
+          @include m-font-size(14);
+        }
+
+        @include mq-up(lg){
+          @include m-font-size(16);
+        }
+
+        &.th01{
+          width: 20%;
+        }
+        &.th02{
+          width: 21%;
+        }
+        &.th03{
+          width: 33%;
+        }
+        &.th04{
+
+        }
+      }
+      td{
+        background: #fff;
+        @include m-font-size(13);
+
+        @include mq-up(sm){
+          @include m-font-size(14);
+        }
+
+
+        @include mq-up(lg){
+          @include m-font-size(16);
+        }
+
+        vertical-align: top;
+        &.middle{
+          vertical-align: middle;
+          width: 40px;
+        }
+      }
+      .txt_tate{
+        span{
+          display: block;
+          text-align: center;
+        }
+
+      }
+  }
+ }
+
+.kodomoeco_box{
+  padding-top:100px;
+  border-top:solid 1px #ccc;
+}
+
+.kodomoeco_scroll{
+  margin-top:15px;
+          @include mq-up(sm){
+            display:none;
+  }
+}

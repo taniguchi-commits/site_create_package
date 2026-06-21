@@ -1,0 +1,66 @@
+@charset "utf-8";
+
+/* =============================================================
+parts/base.scss
+============================================================== */
+
+/* box style
+---------------------------------------------*/
+%e-base{
+	width:100%;
+	padding-left:20px;
+	padding-right: 20px;
+	box-sizing: border-box;
+	margin:0px auto;
+}
+
+.base{
+	max-width: $contents_base;
+	@extend %e-base;
+	
+	@include mq-up(sm) {
+		max-width: $contents_base + 80;
+		padding-left:40px;
+		padding-right: 40px;
+	}
+}
+
+.base--small{
+	max-width: $contents_base_sm;
+	@extend %e-base;
+	
+	@include mq-up(sm) {
+		max-width: $contents_base_sm + 80;
+		padding-left:40px;
+		padding-right: 40px;
+	}
+  
+  .base &{
+		padding-left: 0px;
+		padding-right: 0px;
+    
+    @include mq-up(sm) {
+      max-width: $contents_base_sm;
+    }
+  }
+}
+
+.base--ss{
+	max-width: $contents_base_ss;
+	@extend %e-base;
+	
+	@include mq-up(sm) {
+		max-width: $contents_base_ss + 80;
+		padding-left:40px;
+		padding-right: 40px;
+	}
+  
+  .base &{
+		padding-left: 0px;
+		padding-right: 0px;
+    
+    @include mq-up(sm) {
+      max-width: $contents_base_ss;
+    }
+  }
+}

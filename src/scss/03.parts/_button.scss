@@ -1,0 +1,137 @@
+@charset "utf-8";
+
+/* =============================================================
+button.scss
+============================================================== */
+
+.btn{
+  max-width:390px;
+  
+  a{
+    @include m-alink(#fff);
+  }
+}
+
+$btnRightPadding: 10px; // アイコンの横幅
+
+
+.btn_txt{
+  padding:20px 20px+$btnRightPadding 20px 20px;
+  display: block;
+  text-align: center;
+  @include m-font-size(14);
+  font-weight: bold;
+  position: relative;
+  
+  @include mq-up(lg){
+    padding:25px 20px+$btnRightPadding 25px 20px;
+    @include m-font-size(15);
+  }
+    
+  &::after{
+    content: '';
+    background: url("../../img/icon_arrow_right_white.svg") no-repeat center center / contain;
+    width:10px;
+    height:10px;
+    position: absolute;
+    right:10px;
+    top:50%;
+    transform: translateY(-50%);
+  }
+
+}
+
+
+
+// black + small
+.btn--blackSmall{
+  max-width:290px;
+  
+  .btn_txt{
+    background: #000;
+    padding:15px 20px+$btnRightPadding 15px 20px;
+    @include m-transition(background,0.3);
+    
+    @include mq-up(lg){
+      padding:20px 20px+$btnRightPadding 20px 20px;
+    }
+    
+    &:hover{  
+      @include mq-up(lg){
+        background: $color_main;
+      }      
+    }
+  }
+}
+
+// black
+.btn--black{
+  .btn_txt{
+    background: #000;
+    @include m-transition(background,0.3);
+    color:#fff;
+    
+    &:hover{
+      @include mq-up(lg){
+        background: $color_main;
+      }
+    }
+  }
+}
+a:hover{
+  .btn--black .btn_txt{
+    @include mq-up(lg){
+      background: $color_main;
+    }
+  }
+}
+
+// orange
+.btn--orange{
+  .btn_txt{
+    background: $color_main;
+    @include m-transition(background,0.3);
+    color:#fff;
+    
+    &:hover{
+      @include mq-up(lg){
+        background: #000;
+      }
+    }
+  }
+}
+a:hover{
+  .btn--orange .btn_txt{
+    @include mq-up(lg){
+      background: #000;
+    }
+  }
+}
+
+// txt big
+.btn_txt--big{
+  @include m-font-size(16);
+}
+
+
+// center
+.btn--center{
+  margin: 0 auto;
+}
+
+
+
+
+// black + small
+.innerBtn{  
+  .btn_txt{
+    padding:10px 10px+$btnRightPadding 10px 10px;
+    @include m-transition(background,0.3);
+    @include m-font-size(13);
+    
+    @include mq-up(lg){
+      @include m-font-size(14);
+    }
+  }
+}
+

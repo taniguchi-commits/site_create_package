@@ -1,0 +1,358 @@
+@charset "utf-8";
+
+/* =============================================================
+header.scss
+============================================================== */
+#l-header{
+  width:100%;
+  position: relative;
+  @include mq-up(lg)  {
+  overflow: hidden;
+  }
+}
+
+
+.l-header_inner{
+  display: flex;
+  align-items: center;
+  height: $header_size;
+  position: relative;
+  
+	@include mq-up(lg){
+    height: auto;
+    //padding:20px 0;
+    padding: 40px 0 20px 0;
+    justify-content: space-between;
+    align-items: flex-end;
+    
+  }
+}
+
+
+.l-headerLogo{
+  @include mq-up(lg){
+    width:35%;
+  }
+  
+  &_txt{
+    display: none;
+  
+	  @include mq-up(lg){
+      display: block;
+      color: #666;
+      @include m-font-size(12);
+      font-weight: normal;
+      padding-bottom: 10px;
+      line-height: 1.2;
+      
+      position: absolute;
+      top:20px;
+      left:0;
+    }
+  }
+  
+  &_img{
+    img{
+      width : auto;
+      max-width: none;
+      height:$header_size - 20px;
+	    @include mq-up(lg){
+        width:230px;
+        height: auto;
+      }
+
+      &.shiten_logo{
+        @include mq-up(lg){
+          width:280px;
+        }
+
+      }
+
+    }
+  }
+}
+
+
+.l-header_navi{
+  display: none;
+  
+	@include mq-up(lg){
+    display: block;
+    width:65%;
+  }
+}
+
+.l-header_corprate{
+  letter-spacing: -.4em;
+  text-align: right;
+  margin-bottom: 15px;
+  
+  li{
+    letter-spacing: normal;
+    display: inline-block;
+    margin-left: 10px;
+  }
+  
+  a{
+    @include m-alink($color_main);
+    padding-right: 10px;
+    @include m-transition(opacity);
+    
+    &::after{      
+      @include m-fa_icon(f105);
+      padding-left: 3px;
+      @include m-font-size(10);
+    }
+    
+    &:hover{
+      @include mq-up(lg){
+        opacity: 0.7;
+      }
+    }
+  }
+}
+
+
+
+.l-header_box{
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+.l-header_showroom{
+  display: inline-block;
+  border:1px solid #ccc;
+  max-width: 220px;
+  margin-right: 10px;
+  
+  a{
+    display: block;
+    background: url("../../img/top/head_showroom.png") no-repeat center center / cover;
+    border:2px solid #fff;
+    @include m-alink(#000);
+    padding:5px 75px 5px 20px;
+    @include m-font-size(15);
+    font-weight: bold;
+    font-feature-settings: "palt";
+    @include m-outline(#fff);
+    @include m-transition(all);
+    
+    &:hover{
+      @include mq-up(lg){
+        opacity: 0.8;
+        box-shadow: $shadow;
+      }
+    }
+  }
+  
+  strong{
+    color:$color_warning;
+    display: block;
+    @include m-font-size(11);
+    margin-bottom: 5px;
+    
+    span{
+      font-size: 150%;
+    }
+  }
+}
+
+
+
+.l-header_contact{
+  display: flex;
+  border:1px solid $color_main;
+  border-radius: 3px;
+  flex:1;
+  max-width: 100%;
+  
+  li{
+    width:100%;
+    height: 100%;
+    
+    & + li{
+      border-left:1px solid $color_main;
+    }
+  }
+  
+  a{
+    display: flex;
+    width:100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    @include m-alink($color_main);
+    padding: 12px 0;
+    text-align: center;
+    font-weight: bold;
+    @include m-font-size(13);
+    @include m-transition(all);
+    
+    .icon{
+      display: inline-block;
+      width:20px;
+      height:20px;
+      margin-right: 5px;
+      fill: $color_main;
+      @include m-transition(color);
+    } 
+    
+    
+    &:hover{
+      @include mq-up(lg){
+        background: $color_main;
+        color:#fff;
+      }
+      
+      .icon{
+        @include mq-up(lg){
+          fill:#fff;
+        }
+      }
+    }
+  
+  }
+}
+
+
+//ヒロミさん
+.l-header_hiromi{
+  position: absolute;
+  right: $header_size - 30px;
+  bottom:0;
+  height:100%;
+  text-align: right;
+  
+  @include mq-up(lg){
+    display: none;
+  }
+  @include mq-up(xl){
+    right: -160px;
+    display: block;
+  }
+
+  &-shiten{
+    right: 0px;
+    @include mq-up(xl){
+      right: -160px;
+      display: block;
+    }
+  }
+  
+  img{
+    width:auto;
+    max-width: none;
+    height:100%;
+  }
+}
+
+// スマホ用メニューボタン
+$navibtn_pd: 35px;
+
+.l-header_navibtn{
+  display: block;
+  width:$header_size;
+  height:$header_size;
+  margin-left: auto;
+  position: fixed;
+  right:0px;
+  top: 0;
+  z-index: 999;
+
+	@include mq-up(lg){
+		display: none;
+	}
+
+  button{
+    border: none;
+    width:100%;
+    height: 100%;
+    background: none;
+    position: relative;
+    transition: 0.4s all;
+    outline: none;
+    background: #fff;
+		cursor: pointer;
+
+    &::after{
+      content: '';
+      display: block;
+      width: $header_size - $navibtn_pd;
+      height:2px;
+      background: #000;
+      position: absolute;
+      left: $navibtn_pd / 2;
+      top: 50%;
+      margin-top: -1px;
+      transition: 0.2s all;
+    }
+    span{
+      &::before,
+      &::after{
+        content: '';
+        display: block;
+        width: $header_size - $navibtn_pd;
+        position: absolute;
+        left: $navibtn_pd / 2;
+        transition: 0.2s all;
+        height:2px;
+        background: #000;
+      }
+      &::before{
+        top: $navibtn_pd / 2;
+      }
+      &::after{
+        bottom: $navibtn_pd / 2;
+      }
+			
+			
+
+			&.screen-reader-text {
+				clip: rect(1px, 1px, 1px, 1px);
+				position: absolute !important;
+				height: 1px;
+				width: 1px;
+				overflow: hidden;
+			}
+    }
+
+    //open > button
+    .is-menuopen &{
+      &::after{
+        opacity: 0;
+      }
+
+      span{
+        &::before{
+          -webkit-transform: translateY(11px) rotate(-45deg);
+          transform: translateY(11px) rotate(-45deg);
+        }
+        &::after {
+          -webkit-transform: translateY(-12px) rotate(45deg);
+          transform: translateY(-12px) rotate(45deg);
+        }
+      }
+
+    }
+  }
+}
+
+
+
+/* スマホナビ 
+html{
+  overflow: auto;
+  height: 100%;
+}
+body.menuopen{
+  overflow: hidden;
+  height: 100%;
+}
+.navi_menu{
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  height: 100%;
+}
+*/

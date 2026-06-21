@@ -1,0 +1,71 @@
+@charset "utf-8";
+
+/* =============================================================
+customerharassment.scss
+============================================================== */
+
+.cashara{
+  &__ttl{
+    @include m-font-size(18);
+    margin-bottom: 20px;
+    line-height: 1.4;
+    @include mq-up(sm){
+    @include m-font-size(25);
+    margin-bottom: 25px;
+    }
+    
+    @include mq-up(lg){
+    @include m-font-size(30);
+    margin-bottom: 30px;
+    }
+  }
+  &__txt{
+    @include m-font-size(14);
+    line-height: 1.8;
+
+    @include mq-up(sm){
+    @include m-font-size(15);   
+    }
+    
+    @include mq-up(lg){
+      @include m-font-size(16);    
+    }
+
+    & + &{
+      margin-top: 20px;
+    }
+    span{
+      font-weight: bold;
+    }
+
+    &--right{
+      text-align: right;
+    }
+  }
+
+  &__catch{
+      @include m-font-size(17);
+      font-weight: bold;
+      @include mq-up(sm){
+        @include m-font-size(20);  
+      }
+      
+      @include mq-up(lg){
+        @include m-font-size(22);
+      }
+  }
+
+  &__list{
+        @include m-font-size(16);
+        margin-top: 30px;
+        margin-bottom: 30px;
+        line-height: 1.8;
+        font-weight: bold;
+        background: #eee;
+        padding: 20px 25px;
+        span{
+          font-size: 80%;
+          display: block;
+        }
+  }
+}

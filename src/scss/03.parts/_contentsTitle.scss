@@ -1,0 +1,165 @@
+@charset "utf-8";
+
+/* =============================================================
+contentsTitle.scss
+============================================================== */
+//ページの見出し
+
+.p-contentsTitle{
+  background: url("../../img/about/title_about.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height:200px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  width:100%;
+  overflow: hidden;
+  
+  @include mq-up(sm){
+    height:240px;    
+  }
+  
+  &_sectionName{
+    width: 100%;
+    position:absolute;
+    top:0;
+    right: 0;
+  }
+
+  
+  &::before{
+    content: '';
+    width:100%;
+    height:100%;
+    background: url("../../img/inner/headding_cover.png") no-repeat;
+    background-position: -70% top;
+    background-size:72% auto;
+    mix-blend-mode: multiply;
+    position: absolute;
+    top:0;
+    left: 0;
+    z-index: 5;
+    @include mq-up(lg){
+      background-position: left top;  
+      background-size:contain;
+    }
+  }
+}
+
+.c-contentsTitle_txt{
+  display: inline-block;
+  @extend .mincho;
+  letter-spacing: 0.2rem;
+  @include m-font-size(24);
+  padding: 15px 30px;
+  background: #fff;
+  line-height: 1.3;
+  position: relative;
+  
+  @include mq-up(sm){
+    padding: 20px 40px;
+    @include m-font-size(29);
+  }
+  
+  @include mq-up(lg){
+    padding: 30px 40px;
+    @include m-font-size(32);
+  }
+  
+  &::before{
+    content: '';
+    width: 100vh;
+    height: 100%;
+    position: absolute;
+    right:100%;
+    top:0;
+    background: #fff;
+  }
+  
+  
+  span{
+    position: relative;
+    z-index: 100;
+  }
+}
+
+
+.ttl_inner{
+  background: url("../../img/inner/title_inner.jpg") no-repeat center bottom / cover;
+}
+.ttl_contact{
+  background: url("../../img/inner/title_contact.jpg") no-repeat center bottom / cover;
+}
+.ttl_estimate{
+  background: url("../../img/inner/title_estimate.jpg") no-repeat center bottom / cover;
+}
+.ttl_visit{
+  background: url("../../img/inner/title_visit.jpg") no-repeat center bottom / cover;
+}
+.ttl_reform{
+  background: url("../../img/reform/title_reform.jpg") no-repeat center bottom / cover;
+}
+.ttl_news{
+  background: url("../../img/inner/title_news.jpg") no-repeat center bottom / cover;
+}
+.ttl_column{
+  background: url("../../img/inner/title_column.jpg") no-repeat center bottom / cover;
+}
+.ttl_works{
+  background: url("../../img/works/title_works.jpg") no-repeat center bottom / cover;
+}
+.ttl_voice{  
+  background: url("../../img/inner/title_voice.jpg") no-repeat center bottom / cover;
+}
+
+.ttl_kitchen{  
+  background: url("../../img/inner/title_kitchen.jpg") no-repeat center bottom / cover;
+}
+
+.ttl_corporate{  
+  background: url("../../img/corporate/title_corporate.jpg") no-repeat center bottom / cover;
+}
+
+
+// showroom
+.ttl_showroom{
+  background: url("../../img/showroom/title_showroom.jpg") no-repeat center bottom / cover;
+}
+.p-contentsTitle--showroom{
+  text-align: center; 
+  height:250px;
+  padding-bottom: 40px;
+  
+  @include mq-up(sm){
+    height:280px;    
+  }
+  
+  @include mq-up(lg){
+    height:300px;
+    padding-bottom: 40px;
+  }
+  
+  .c-contentsTitle_txt{
+    @include m-font-size(29);
+    @extend .gothic;
+    
+    @include mq-up(sm){
+      @include m-font-size(40);
+    }  
+    @include mq-up(lg){
+      padding: 20px 40px;
+      @include m-font-size(50);
+    }
+    
+    &::before{
+      display: none;
+    }
+    
+    strong{
+      display: inline-block;
+    }
+  }
+  
+}

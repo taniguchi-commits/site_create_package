@@ -1,0 +1,335 @@
+@charset "utf-8";
+
+/* =============================================================
+about.scss
+============================================================== */
+.awaPromo{
+  margin: 0 calc(50% - 50vw);
+  @include mq-up(sm){
+    margin: 0;
+    background: url("../../img/reform/dannetsu/awa_promo_bg.png") no-repeat center top;
+    background-size: cover;
+  }
+  
+  &_inner{
+    @include mq-up(sm){
+      width:55%;
+    }
+  }
+  
+  h2{
+    @include mq-up(sm){
+      padding:30px 30px 0px 30px;
+    }    
+  }
+  
+  p{
+    padding: 20px;
+    @include m-txt_sp;
+    
+    @include mq-up(sm){
+      padding: 30px 30px 30px 30px;
+    }
+    
+    
+    .is-smView{
+      display: none;    
+      @include mq-up(sm){
+        display: inline;
+      }
+    }
+  }
+}
+
+
+.awa_ttl{
+  background: url(../../img/reform/dannetsu/ttl_bg.gif) repeat-x left bottom;
+  padding-bottom: 10px;
+}
+
+
+.awaSeason{
+  margin-top: 20px;
+  @include mq-up(sm){
+    display: flex;
+  }
+  
+  &_container{
+    width:100%;
+    padding:15px;
+    margin-top: 15px;
+    @include mq-up(sm){
+      width:50%;
+    }
+    @include mq-up(lg){
+      padding:20px;
+    }
+  }
+  
+  &_inner{
+    padding:10px;
+    background: #fff;
+    height: 100%;
+    @include mq-up(lg){
+      padding:20px;
+    }
+  }
+  
+  &_headding{
+    display: flex;
+    margin-bottom: 10px;
+    
+    h4{
+      width:50px;
+      margin-right: 10px;
+      @include mq-up(md){
+        width:70px;
+      }
+      @include mq-up(lg){
+        width:90px;
+      }
+    }
+    ul{
+      flex:1;
+      max-width: 100%;
+    }
+  }
+  
+  figure{
+    text-align: center;
+  }
+  
+  
+  &--summer{
+    background: url("../../img/reform/dannetsu/summer_bg.gif") repeat left top;
+  }  
+  &--winter{
+    background: url("../../img/reform/dannetsu/winter_bg.gif") repeat left top;
+  }
+}
+
+
+
+.awaFlow{
+  margin-top: 30px;
+  @include mq-up(sm){
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+    
+  &_item{
+    display: flex;
+    margin-bottom: 15px;
+    @include mq-up(sm){
+      width:48%;
+      display: block;
+    }
+    @include mq-up(md){
+      width:23.5%;
+    }
+    
+    div{
+      width:40%;
+      @include mq-up(sm){
+        width:100%;
+        margin-bottom: 10px;
+      }
+    }
+    p{
+      width:60%;
+      padding-left:15px;
+      @include m-font-size(13);
+      line-height: 1.3;
+      
+      @include mq-up(sm){
+        @include m-font-size(14);
+        line-height: 1.5;
+        width:100%;
+        position: relative;
+        padding-left:25px;
+      }
+      
+      span{
+        display: flex;
+        width:20px;
+        height: 20px;
+        color:#fff;
+        font-weight: bold;
+        align-items: center;
+        justify-content: center;
+        background: $color_main;
+        margin-bottom: 5px;
+        
+        @include mq-up(sm){
+          position: absolute;
+          left:0;
+          top:0;
+        }
+      }
+      
+      em{
+        font-weight: bold;
+        font-style: normal;
+      }
+    }
+  }
+}
+
+
+.awaPoint{
+  counter-reset: awanum;
+  
+  &_list{
+    & + li{
+      margin-top: 20px;
+      @include mq-up(sm){
+        margin-top: 30px;
+      }
+    }
+  }
+  
+  h5{
+    display: block;
+    position: relative;
+    @include m-font-size(18);
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding-left:40px;
+    padding-top: 5px;
+    line-height: 1.3;
+    color:$color_main;
+    @include mq-up(sm){
+      @include m-font-size(20);
+      padding-top: 0px;
+    }
+    @include mq-up(lg){
+      @include m-font-size(22);
+    }
+    
+    &::before{
+      counter-increment: awanum;
+      content: counter(awanum);
+      width:30px;
+      height: 30px;
+      color:#fff;
+      font-style: italic;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: $color_main;
+      @include m-font-size(14);
+      position: absolute;
+      left:0;
+      top:0;
+    }
+    
+    
+  }
+  
+  p{
+    @include mq-up(sm){
+      padding-left:40px;
+    }
+    
+  }
+}
+
+
+
+.awaTokucho{
+  @include mq-up(sm){
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  &_item{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    
+    @include mq-up(sm){
+      width:48%;
+      margin-bottom: 30px;
+    }
+    @include mq-up(lg){
+      margin-bottom: 40px;
+    }
+    
+
+    
+    h4{
+      background: url("../../img/reform/dannetsu/bg01.gif") repeat left top;
+      padding:10px;
+      @include m-font-size(18);
+      line-height: 1.3;
+      width:100%;
+      margin-bottom: 10px;
+      color: #0071bc;
+      font-weight: bold;
+    
+      @include mq-up(sm){
+        margin-bottom: 15px;
+      }
+      @include mq-up(lg){
+        margin-bottom: 20px;
+      }
+    }
+    figure{
+      width:40%;
+      @include mq-up(md){
+        width:135px;
+      }
+    }
+    p{
+      width:60%;
+      padding-left:20px;
+      @include mq-up(md){
+        width: auto;
+        max-width: 100%;
+        flex:1;
+      }
+    }
+  }
+}
+
+
+.awaContact{
+  background: url("../../img/reform/dannetsu/winter_bg.gif") repeat left top;
+  padding:10px;
+  
+  &_inner{
+    background: #fff;
+    padding:20px;
+    @include mq-up(sm){
+      padding:30px;
+    }
+    @include mq-up(lg){
+      padding:40px;
+    }
+  }
+  
+  &_txt{
+    @include m-font-size(16);
+    line-height: 1.5;
+    @include mq-up(sm){
+      @include m-font-size(17);
+    }
+    @include mq-up(lg){
+      @include m-font-size(18);
+      text-align: center;
+    }
+  }
+  
+  .btn{
+    margin-top: 20px;
+    @include mq-up(md){
+      margin-top: 30px;
+    }
+    @include mq-up(lg){
+      margin-top: 40px;
+    }
+  }
+}

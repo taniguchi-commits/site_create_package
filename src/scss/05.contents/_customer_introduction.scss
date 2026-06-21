@@ -1,0 +1,575 @@
+@charset "utf-8";
+
+/* =============================================================
+introlist.scss
+============================================================== */
+
+/***フォームの真中***/
+.intro__base{
+  margin: 0 auto;
+  max-width: 1040px !important;
+  padding-left:0px;
+  padding-right: 0px;
+
+  @include mq-up(sm){
+    padding-left:40px;
+    padding-right: 40px;
+  }
+
+  .p-title_h2{
+    margin-left: 20px;
+    margin-right: 20px;
+
+    @include mq-up(sm){
+      margin-left: 0px;
+      margin-right: 0px;
+    }
+  }
+}
+
+/******************/
+
+.introCampaign{
+  /*promo*/
+  &__promo{
+    margin-bottom: 20px;
+    display: block;
+    @include mq-up(sm){
+      margin-bottom: 35px;
+    }
+
+    @include mq-up(lg){
+      margin-bottom: 50px;
+    }
+
+  }
+  &__txt{
+    @include m-font-size(12);
+    text-align: left;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    @include mq-up(sm){
+      @include m-font-size(13);
+      margin-bottom: 40px;
+    }
+    @include mq-up(md){
+      @include m-font-size(15);
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    @include mq-up(lg){
+      @include m-font-size(16);
+      margin-bottom: 60px;
+    }
+    br{
+      display: none;
+      @include mq-up(md){
+        display: block;
+      }
+    }
+  }
+
+  /*---present----*/
+
+  &__present{
+    padding: 15px;
+    margin-bottom: 20px;
+    @include mq-up(sm){
+      margin-bottom: 40px;
+      padding: 15px 15px 20px;
+    }
+    @include mq-up(lg){
+      padding: 30px;
+      margin-bottom: 45px;
+    }
+    /*****box modifier******/
+    &.m-red{
+      border: 3px solid #d02323;
+    }
+    &.m-orenge{
+      border: 3px solid #ed6c00;
+    }
+
+    &__ttl{
+      text-align: center;
+      @include mq-up(sm){
+        margin-top: -37px;
+      }
+      @include mq-up(lg){
+        margin-top: -52px;
+      }
+        span{
+          position: relative;
+        }
+    }
+
+    &__all{
+      text-align: left;
+      margin-top: 10px;
+      margin-bottom: 8px;
+      @include m-font-size(14);
+      line-height: 1.3;
+      font-weight: bold;
+
+      @include mq-up(ss){
+        text-align: center;
+      }
+
+      @include mq-up(sm){
+        @include m-font-size(16);
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+
+      span{
+        background:#d02323;
+        color: #fff;
+        display: block;
+        padding: 5px 8px;
+        margin-bottom: 10px;
+        text-align: center;
+        @include mq-up(sm){
+          display: inline-block;
+          padding: 3px 8px;
+          margin-right: 8px;
+          margin-bottom: 0px;
+        }
+
+        @include mq-up(lg){}
+      }
+    }
+
+    &__caution{
+      text-align: left;
+      @include m-font-size(11);
+      line-height: 1.3;
+      @include mq-up(md){
+        text-align: center;
+      }
+    }
+  }
+
+  /**select_item**/
+  &__select{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 10px;
+
+    @include mq-up(sm){
+      margin-bottom: 20px;
+    }
+
+    @include mq-up(lg){
+      margin-bottom: 30px;
+    }
+
+    &__box{
+      width: 100%;
+      margin-bottom: 20px;
+      &:last-child{
+        margin-bottom: 10px;
+      }
+      @include mq-up(md){
+        width: 47%;
+      }
+      @include mq-up(sm){
+        width: 31%;
+        margin-bottom: 0px;
+      }
+      &__ph{
+        border: 1px solid #e0e0e0;
+        margin-bottom: 15px;
+        text-align: center;
+      }
+      &__maker{
+        font-weight: bold;
+        @include m-font-size(12);
+        margin-bottom: 5px;
+        @include mq-up(sm){
+          @include m-font-size(13);
+        }
+        @include mq-up(lg){
+          @include m-font-size(14);
+        }
+      }
+
+      &__name{
+        font-weight: bold;
+        @include m-font-size(15);
+        color: $color_orange;
+        @include mq-up(sm){
+          @include m-font-size(14);
+        }
+        @include mq-up(md){
+          @include m-font-size(17);
+        }
+        @include mq-up(lg){
+          @include m-font-size(18);
+        }
+      }
+    }
+  }
+
+  /*---seiyaku----*/
+  &__seiyaku{
+    padding-top: 10px;
+    /*display: flex;
+    justify-content: space-between;*/
+    @include mq-up(sm){
+      padding-top: 20px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__box{
+      width: 100%;
+      margin-bottom: 10px;
+      @include mq-up(sm){
+        width: 48%;
+        margin-bottom: 0px;
+      }
+
+      @include mq-up(lg){
+        width: 47%;
+      }   
+
+      &__ttl{
+        border: 1px solid #e0e0e0;
+        
+        padding: 10px 10px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        text-align: center;
+        @include m-font-size(16);
+
+        @include mq-up(sm){
+          @include m-font-size(17);
+          margin-bottom: 12px;
+        }
+
+        @include mq-up(lg){
+          @include m-font-size(18);
+          margin-bottom: 15px;
+        }
+
+        &.m-orenge{
+          color: #ed6c00;
+        }
+        &.m-red{
+          color: #d02323;
+        }
+      }
+      &__txt{
+        @include m-font-size(13);
+        line-height: 1.5;
+        font-weight: bold;
+
+        @include mq-up(sm){
+          @include m-font-size(14);
+        }
+
+        @include mq-up(lg){
+          @include m-font-size(16);
+        }
+
+        &.m-orenge{
+          span{
+            color: #ed6c00;
+          }
+        }
+        &.m-red{
+          span{
+            color: #d02323;
+          }
+        } 
+      }
+    }
+  }
+
+  /**step***/
+
+  &__step{
+    padding-top: 10px;
+
+    @include mq-up(sm){
+      padding-top: 20px;
+    }
+
+    @include mq-up(lg){
+      padding-top: 30px;
+    }
+
+    &__ttl{
+      text-align: left;
+      @include m-font-size(18);
+      font-weight: bold;
+      margin-bottom: 20px;
+      line-height: 1.4;
+      @include mq-up(ss){
+        text-align: center;
+      }
+
+      @include mq-up(sm){
+        @include m-font-size(25);
+        margin-bottom: 25px;
+      }
+
+
+      @include mq-up(lg){
+        @include m-font-size(30);
+        margin-bottom: 30px;
+      }
+
+    }
+
+    /********/
+    &__outer{
+      max-width: 720px;
+      margin: 0 auto;
+      padding-bottom: 30px;
+    }
+    &__box{
+      width: 100%;
+      margin-bottom: 20px;
+      
+      @include mq-up(sm){
+        display: flex;
+        margin-bottom: 30px;
+      }
+
+      &:last-child{
+        margin-bottom: 0px;
+      }
+      &__ttl{
+        @include m-font-size(16);
+        font-weight: bold;
+        @extend .ygothic;
+        color:$color_orange;
+        font-style: italic;
+        padding-bottom: 3px;
+
+        @include mq-up(sm){
+          @include m-font-size(17);
+          padding-bottom: 0px;
+        }
+
+        @include mq-up(md){
+          @include m-font-size(19);
+        }
+
+        @include mq-up(lg){
+          @include m-font-size(20);
+        }
+
+        span{
+          font-size: 180%;
+        }
+      }
+      &__txt{
+        flex:1;
+        border-top: 2px solid #e0e0e0;
+        padding-top: 10px;
+        @include mq-up(sm){
+          padding-top: 0px;
+          margin-left: 30px;
+          padding-left: 30px;
+          border-top: none;
+          border-left: 2px solid #e0e0e0;
+        }
+
+        dl{
+          dt{
+            color:$color_orange;
+            @include m-font-size(16);
+            font-weight: bold;
+            margin-bottom: 8px;
+            line-height: 1.6;
+
+            @include mq-up(sm){
+              @include m-font-size(17);
+            }
+
+            @include mq-up(lg){
+              @include m-font-size(18);
+              margin-bottom: 10px;
+            }
+          }
+          dd{
+              @include m-font-size(13);
+              line-height: 1.6;
+              @include mq-up(sm){
+                @include m-font-size(14);
+              }
+              @include mq-up(md){
+                @include m-font-size(15);
+              }
+              @include mq-up(lg){
+                @include m-font-size(16);
+              }
+          }
+        }
+      }
+    }
+  }
+}
+
+.introStep{
+  &__outer{
+    margin-bottom: 10px;
+    @include mq-up(sm){
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+
+    @include mq-up(md){
+      @include m-flex-row3($width:32%);
+    }
+  }
+  &__list{
+    padding-top: 20px;
+    margin-left: 15px;
+    @include m-font-size(12);
+
+
+    @include mq-up(sm){
+      padding-top: 25px;
+      @include m-font-size(13);
+    }
+
+    @include mq-up(lg){
+      padding-top: 35px;
+      @include m-font-size(14);
+    }
+
+    li{
+      list-style-type: disc;
+      line-height: 1.4;
+      margin-bottom: 5px;
+    }
+  }
+}
+
+
+.introfreedial{
+  background: url(../../img/customer_introduction/free_bg.jpg) center center no-repeat;
+  background-size: cover;
+  padding: 30px 20px 30px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+
+  @include mq-up(lg){
+    margin-top: 40px;
+    margin-bottom: 90px;
+    padding-top: 55px;
+    padding-bottom: 55px;
+  }
+    &__box{
+      max-width: 800px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 13px 18px 13px;
+
+      @include mq-up(sm){
+        padding: 20px 18px 20px;
+      }
+
+      @include mq-up(lg){
+        padding: 30px 10px 30px;
+      }
+
+      &__txt{
+        @include m-font-size(13);
+        margin-bottom: 15px;
+        text-align: left;
+        line-height: 1.3;
+        @include mq-up(sm){
+          text-align: center;
+          @include m-font-size(14);
+        }
+        @include mq-up(lg){
+          @include m-font-size(16);
+          margin-bottom: 20px;
+        }
+      }
+      &__tel{
+        text-align: center;
+        margin-bottom: 15px;
+        @include mq-up(sm){
+          margin-bottom: 18px;
+        }
+        @include mq-up(lg){
+          margin-bottom: 20px;
+        }
+      }
+      &__time{
+        font-weight: bold;
+        @include m-font-size(16);
+        text-align: center;
+        @include mq-up(sm){
+          display: flex;
+          justify-content: center;
+        }
+        &__week{
+          
+          @include mq-up(sm){
+            display: flex;
+            justify-content: center;
+          }
+        }
+        &__uketsuke{
+          margin-bottom: 5px;
+          @include m-font-size(14);
+          @include mq-up(sm){
+            margin-right: 10px;
+            margin-bottom: 0px;
+          }
+          @include mq-up(sm){
+            @include m-font-size(15);
+          }
+          @include mq-up(lg){
+            @include m-font-size(16);
+          }
+
+
+        }
+        &__weekday{
+          margin-bottom: 5px;
+          @include m-font-size(14);
+          @include mq-up(sm){
+            @include m-font-size(15);
+          }
+          @include mq-up(lg){
+            @include m-font-size(16);
+          }
+          &:before{
+            content: "平日";
+            margin-right: 5px;
+          }
+          &:after{
+            
+            @include mq-up(sm){
+              content: "／";
+            }
+
+          }
+        }
+        &__holiday{
+          @include m-font-size(14);
+          @include mq-up(sm){
+            @include m-font-size(15);
+          }
+          @include mq-up(lg){
+            @include m-font-size(16);
+          }
+          &:before{
+            content: "土日";
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+}

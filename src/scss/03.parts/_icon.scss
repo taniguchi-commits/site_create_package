@@ -1,0 +1,20 @@
+@charset "utf-8";
+
+/* =============================================================
+icon.scss
+============================================================== */
+//アイコン
+
+
+.icon_right--white{
+  &::after{
+    content: '';
+    background: url("../../img/icon_arrow_right_white.svg") no-repeat center center / contain;
+    width:10px;
+    height:10px;
+    position: absolute;
+    right:10px;
+    top:50%;
+    transform: translateY(-50%);
+  }
+}
