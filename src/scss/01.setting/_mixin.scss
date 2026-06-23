@@ -1,6 +1,6 @@
 
 @charset "utf-8";
-
+@use "sass:math";
 // =============================================================
 // base_mixin.css
 // ==============================================================
@@ -47,6 +47,73 @@ $breakpoint-down: (
 }
 
 
+
+/***************/
+
+$breakpoint-up_cq: (
+  'ss': 'screen and (min-width: 360px)', //最小
+  'sm': 'screen and (min-width: 560px)', //タブサイズ開始
+  'md': 'screen and (min-width: 768px)', //中間
+  'lg': 'screen and (min-width: 960px)', //PCサイズ開始
+  'xl': 'screen and (min-width: 1200px)', //調整
+  'xxl': 'screen and (min-width: 1300px)', //調整
+) !default;
+
+@mixin cq-up($breakpoint_cq: md) {
+  @media #{map-get($breakpoint-up_cq, $breakpoint_cq)} {
+    @content;
+  }
+}
+
+// PCファースト
+// @include mq-down(tab) 
+$breakpoint-down_cq: (
+  'ss': 'screen and (max-width: 359px)',
+  'sm': 'screen and (max-width: 599px)',
+  'md': 'screen and (max-width: 767px)',
+  'lg': 'screen and (max-width: 959px)',
+  'xl': 'screen and (max-width: 1199px)',
+) !default;
+
+@mixin cq-down($breakpoint_cq: md) {
+  @media #{map-get($breakpoint-down_cq, $breakpoint_cq)} {
+    @content;
+  }
+}
+
+@mixin cqw-font($min, $size, $max, $container:1080) {
+  font-size: clamp(
+    #{$min}px,
+    #{math.div($size, $container) * 100}cqw,
+    #{$max}px
+  );
+}
+
+// ==============================
+// Container Query
+// ==============================
+
+
+$container-breakpoints: (
+  'ss': 360px,
+  'sm': 560px,
+  'md': 768px,
+  'lg': 960px,
+  'xl': 1200px,
+  'xxl': 1300px,
+) !default;
+
+@mixin cq-up($size: md) {
+  @container (min-width: #{map-get($container-breakpoints, $size)}) {
+    @content;
+  }
+}
+
+@mixin cq-down($size: md) {
+  @container (max-width: #{map-get($container-breakpoints, $size)}) {
+    @content;
+  }
+}
 
 
 

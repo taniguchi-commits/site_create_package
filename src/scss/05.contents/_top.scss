@@ -13,11 +13,6 @@ top.scss
 
 .grid{
 
-  &_wrap{
-    max-width: 1100px;
-    margin-inline: auto;
-  }
-
   /*align-items: center;*/
   display: grid;
 
@@ -31,12 +26,17 @@ top.scss
   /*grid-auto-rows: minmax(100px, auto);　最小で高さ100　最大でauto*/
 
   column-gap: 2%; //横
-  row-gap:8%; //縦
+  row-gap:30px; //縦 8%とかしたらだめやわ
 
-  
+  &_wrap{
+    margin-inline: auto;
+    max-width: 1200px;
+    container-type: inline-size; //コンテナークエリーに必要
+ }
 
   div{
-    border: 1px solid #000;    
+    border: 1px solid #000; 
+    @include cqw-font(14,18,20,1200); //フォントのmixin
   }
   &a{
     background-color: #ef7a00;
@@ -57,7 +57,7 @@ top.scss
     grid-row-start: 3;
     grid-row-end: 4;*/
   }
-
+ 
 }
 
 /* promo
@@ -2275,7 +2275,7 @@ top.scss
   }
   
   a{
-    display: block;c
+    display: block;
     
     &:hover{
       @include mq-up(lg){
