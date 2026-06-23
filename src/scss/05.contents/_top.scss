@@ -3,7 +3,17 @@
 /* =============================================================
 top.scss
 ============================================================== */
+.grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-inline: auto;
+  max-width: 800px;
+  grid-gap: 1%;
+  div{
+    border: 1px solid #000;    
+  }
 
+}
 
 /* promo
 --------------------------------------*/
